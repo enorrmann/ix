@@ -1,0 +1,77 @@
+// CONFIGURACION GENERAL
+project --topLevelPackage ar.com.ix.shelters
+// CONFIGURACION DE LA BASE DE DATOS
+jpa setup --database HYPERSONIC_PERSISTENT --provider HIBERNATE
+// ENTIDADES, O SEA LOS DATOS QUE SE GUARDAN DE CADA COSA
+// ZONAS
+entity jpa --class ~.model.Zona
+field string --fieldName nombre
+field string --fieldName descripcion
+// LOCALIDADES
+entity jpa --class ~.model.Localidad
+field string --fieldName nombre
+// TECNICOS
+entity jpa --class ~.model.Tecnico
+field string --fieldName nombre
+field string --fieldName domicilio
+field string --fieldName celular
+field reference --fieldName localidad --type ~.model.Localidad
+field reference --fieldName zona --type ~.model.Zona
+// SHELTERS
+entity jpa --class ~.model.Shelter
+field string --fieldName nodo
+field string --fieldName codigoSitio
+field string --fieldName modelo
+field reference --fieldName responsable --type ~.model.Tecnico
+field reference --fieldName localidad --type ~.model.Localidad
+field reference --fieldName zona --type ~.model.Zona
+field string --fieldName coordenadas
+// CLIENTES
+entity jpa --class ~.model.Cliente
+field string --fieldName nombre
+field string --fieldName domicilio
+field string --fieldName email
+field string --fieldName cuit
+field string --fieldName telFax
+// Fabricantes
+entity jpa --class ~.model.Fabricante
+field string --fieldName nombre
+// Ubicaciones
+entity jpa --class ~.model.Ubicacion
+field string --fieldName nombre
+field string --fieldName descripcion
+// COMPONENTES
+entity jpa --class ~.model.Componente
+field string --fieldName numeroItx
+field string --fieldName descripcion
+field string --fieldName numeroDeSerie
+field reference --fieldName fabricante --type ~.model.Fabricante
+field string --fieldName observaciones
+// ESTADO DE LAS TAREAS
+entity jpa --class ~.model.EstadoTarea
+field string --fieldName nombre
+// ESTADO DE LOS ENVIOS
+//entity jpa --class ~.model.EstadoMovimiento
+//field string --fieldName nombre
+// movimientos componentes
+entity jpa --class ~.model.Movimiento
+field reference --fieldName componente --type ~.model.Componente
+field date --fieldName fechaEnvio --type java.util.Date  --dateFormat MEDIUM --timeFormat NONE --persistenceType JPA_DATE
+//field reference --fieldName estadoEnvio --type ~.model.EstadoMovimiento
+field reference --fieldName ubicacionDestino --type ~.model.Ubicacion
+field reference --fieldName shelterDestino --type ~.model.Shelter
+field string --fieldName observaciones
+field reference --fieldName destinatario --type ~.model.Tecnico
+// TAREAS
+entity jpa --class ~.model.Tarea
+field string --fieldName descripcion
+field reference --fieldName responsable --type ~.model.Tecnico
+field reference --fieldName shelter --type ~.model.Shelter
+field reference --fieldName estado --type ~.model.EstadoTarea
+field date --fieldName fechaInicio --type java.util.Date --dateFormat MEDIUM --timeFormat NONE --persistenceType JPA_DATE
+field string --fieldName horaInicio
+field date --fieldName fechaFin --type java.util.Date --dateFormat MEDIUM --timeFormat NONE --persistenceType JPA_DATE
+field string --fieldName horaFin
+// CONFIGURACION DE LA WEB
+web jsf setup --library PRIMEFACES --implementation ORACLE_MOJARRA --theme BLACK_TIE
+web jsf all --package ~.web
