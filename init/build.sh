@@ -8,4 +8,5 @@ cp $BACKUP_FOLDER/messages_es.properties  $PROJECT_HOME/src/main/resources/ar/co
 cp $BACKUP_FOLDER/roo_logo.png  $PROJECT_HOME/src/main/webapp/resources/images
 cp $BACKUP_FOLDER/persistence.xml $PROJECT_HOME/src/main/resources/META-INF
 cp $BACKUP_FOLDER/pages/* $PROJECT_HOME/src/main/webapp/pages
+cp $BACKUP_FOLDER/templates/* $PROJECT_HOME/src/main/webapp/templates
 cp $BACKUP_FOLDER/css/* $PROJECT_HOME/src/main/webapp/resources/css

@@ -40,8 +40,14 @@
           </p:column>
 
           <p:column headerText="Localidad">
-            #{shelter.localidad.nombre}<br/>
-            #{shelter.localidad.departamento.nombre}<br/>
+            #{shelter.localidad.nombre}
+          </p:column>
+
+          <p:column headerText="Departamento">
+            #{shelter.localidad.departamento.nombre}
+          </p:column>
+
+          <p:column headerText="Provincia">
             #{shelter.localidad.departamento.provincia.nombre}
           </p:column>
 
