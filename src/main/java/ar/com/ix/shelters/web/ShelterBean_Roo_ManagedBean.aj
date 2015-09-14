@@ -6,11 +6,11 @@ package ar.com.ix.shelters.web;
 import ar.com.ix.shelters.model.Localidad;
 import ar.com.ix.shelters.model.Shelter;
 import ar.com.ix.shelters.model.Tecnico;
-import ar.com.ix.shelters.model.Zona;
+import ar.com.ix.shelters.model.TipoNodo;
 import ar.com.ix.shelters.web.ShelterBean;
 import ar.com.ix.shelters.web.converter.LocalidadConverter;
 import ar.com.ix.shelters.web.converter.TecnicoConverter;
-import ar.com.ix.shelters.web.converter.ZonaConverter;
+import ar.com.ix.shelters.web.converter.TipoNodoConverter;
 import ar.com.ix.shelters.web.util.MessageFactory;
 import java.util.ArrayList;
 import java.util.List;
@@ -131,6 +131,30 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         
         HtmlPanelGrid htmlPanelGrid = (HtmlPanelGrid) application.createComponent(HtmlPanelGrid.COMPONENT_TYPE);
         
+        OutputLabel tipoNodoCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        tipoNodoCreateOutput.setFor("tipoNodoCreateInput");
+        tipoNodoCreateOutput.setId("tipoNodoCreateOutput");
+        tipoNodoCreateOutput.setValue("Tipo Nodo:");
+        htmlPanelGrid.getChildren().add(tipoNodoCreateOutput);
+        
+        AutoComplete tipoNodoCreateInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
+        tipoNodoCreateInput.setId("tipoNodoCreateInput");
+        tipoNodoCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.tipoNodo}", TipoNodo.class));
+        tipoNodoCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{shelterBean.completeTipoNodo}", List.class, new Class[] { String.class }));
+        tipoNodoCreateInput.setDropdown(true);
+        tipoNodoCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "tipoNodo", String.class));
+        tipoNodoCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{tipoNodo.nombre}", String.class));
+        tipoNodoCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{tipoNodo}", TipoNodo.class));
+        tipoNodoCreateInput.setConverter(new TipoNodoConverter());
+        tipoNodoCreateInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(tipoNodoCreateInput);
+        
+        Message tipoNodoCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        tipoNodoCreateInputMessage.setId("tipoNodoCreateInputMessage");
+        tipoNodoCreateInputMessage.setFor("tipoNodoCreateInput");
+        tipoNodoCreateInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(tipoNodoCreateInputMessage);
+        
         OutputLabel nodoCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         nodoCreateOutput.setFor("nodoCreateInput");
         nodoCreateOutput.setId("nodoCreateOutput");
@@ -233,30 +257,6 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         localidadCreateInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(localidadCreateInputMessage);
         
-        OutputLabel zonaCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
-        zonaCreateOutput.setFor("zonaCreateInput");
-        zonaCreateOutput.setId("zonaCreateOutput");
-        zonaCreateOutput.setValue("Zona:");
-        htmlPanelGrid.getChildren().add(zonaCreateOutput);
-        
-        AutoComplete zonaCreateInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
-        zonaCreateInput.setId("zonaCreateInput");
-        zonaCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.zona}", Zona.class));
-        zonaCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{shelterBean.completeZona}", List.class, new Class[] { String.class }));
-        zonaCreateInput.setDropdown(true);
-        zonaCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "zona", String.class));
-        zonaCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{zona.nombre} #{zona.descripcion}", String.class));
-        zonaCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{zona}", Zona.class));
-        zonaCreateInput.setConverter(new ZonaConverter());
-        zonaCreateInput.setRequired(false);
-        htmlPanelGrid.getChildren().add(zonaCreateInput);
-        
-        Message zonaCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
-        zonaCreateInputMessage.setId("zonaCreateInputMessage");
-        zonaCreateInputMessage.setFor("zonaCreateInput");
-        zonaCreateInputMessage.setDisplay("icon");
-        htmlPanelGrid.getChildren().add(zonaCreateInputMessage);
-        
         OutputLabel coordenadasCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         coordenadasCreateOutput.setFor("coordenadasCreateInput");
         coordenadasCreateOutput.setId("coordenadasCreateOutput");
@@ -285,6 +285,30 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         ELContext elContext = facesContext.getELContext();
         
         HtmlPanelGrid htmlPanelGrid = (HtmlPanelGrid) application.createComponent(HtmlPanelGrid.COMPONENT_TYPE);
+        
+        OutputLabel tipoNodoEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        tipoNodoEditOutput.setFor("tipoNodoEditInput");
+        tipoNodoEditOutput.setId("tipoNodoEditOutput");
+        tipoNodoEditOutput.setValue("Tipo Nodo:");
+        htmlPanelGrid.getChildren().add(tipoNodoEditOutput);
+        
+        AutoComplete tipoNodoEditInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
+        tipoNodoEditInput.setId("tipoNodoEditInput");
+        tipoNodoEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.tipoNodo}", TipoNodo.class));
+        tipoNodoEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{shelterBean.completeTipoNodo}", List.class, new Class[] { String.class }));
+        tipoNodoEditInput.setDropdown(true);
+        tipoNodoEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "tipoNodo", String.class));
+        tipoNodoEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{tipoNodo.nombre}", String.class));
+        tipoNodoEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{tipoNodo}", TipoNodo.class));
+        tipoNodoEditInput.setConverter(new TipoNodoConverter());
+        tipoNodoEditInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(tipoNodoEditInput);
+        
+        Message tipoNodoEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        tipoNodoEditInputMessage.setId("tipoNodoEditInputMessage");
+        tipoNodoEditInputMessage.setFor("tipoNodoEditInput");
+        tipoNodoEditInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(tipoNodoEditInputMessage);
         
         OutputLabel nodoEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         nodoEditOutput.setFor("nodoEditInput");
@@ -388,30 +412,6 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         localidadEditInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(localidadEditInputMessage);
         
-        OutputLabel zonaEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
-        zonaEditOutput.setFor("zonaEditInput");
-        zonaEditOutput.setId("zonaEditOutput");
-        zonaEditOutput.setValue("Zona:");
-        htmlPanelGrid.getChildren().add(zonaEditOutput);
-        
-        AutoComplete zonaEditInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
-        zonaEditInput.setId("zonaEditInput");
-        zonaEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.zona}", Zona.class));
-        zonaEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{shelterBean.completeZona}", List.class, new Class[] { String.class }));
-        zonaEditInput.setDropdown(true);
-        zonaEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "zona", String.class));
-        zonaEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{zona.nombre} #{zona.descripcion}", String.class));
-        zonaEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{zona}", Zona.class));
-        zonaEditInput.setConverter(new ZonaConverter());
-        zonaEditInput.setRequired(false);
-        htmlPanelGrid.getChildren().add(zonaEditInput);
-        
-        Message zonaEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
-        zonaEditInputMessage.setId("zonaEditInputMessage");
-        zonaEditInputMessage.setFor("zonaEditInput");
-        zonaEditInputMessage.setDisplay("icon");
-        htmlPanelGrid.getChildren().add(zonaEditInputMessage);
-        
         OutputLabel coordenadasEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         coordenadasEditOutput.setFor("coordenadasEditInput");
         coordenadasEditOutput.setId("coordenadasEditOutput");
@@ -440,6 +440,16 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         ELContext elContext = facesContext.getELContext();
         
         HtmlPanelGrid htmlPanelGrid = (HtmlPanelGrid) application.createComponent(HtmlPanelGrid.COMPONENT_TYPE);
+        
+        HtmlOutputText tipoNodoLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        tipoNodoLabel.setId("tipoNodoLabel");
+        tipoNodoLabel.setValue("Tipo Nodo:");
+        htmlPanelGrid.getChildren().add(tipoNodoLabel);
+        
+        HtmlOutputText tipoNodoValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        tipoNodoValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.tipoNodo}", TipoNodo.class));
+        tipoNodoValue.setConverter(new TipoNodoConverter());
+        htmlPanelGrid.getChildren().add(tipoNodoValue);
         
         HtmlOutputText nodoLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
         nodoLabel.setId("nodoLabel");
@@ -491,16 +501,6 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         localidadValue.setConverter(new LocalidadConverter());
         htmlPanelGrid.getChildren().add(localidadValue);
         
-        HtmlOutputText zonaLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
-        zonaLabel.setId("zonaLabel");
-        zonaLabel.setValue("Zona:");
-        htmlPanelGrid.getChildren().add(zonaLabel);
-        
-        HtmlOutputText zonaValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
-        zonaValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.zona}", Zona.class));
-        zonaValue.setConverter(new ZonaConverter());
-        htmlPanelGrid.getChildren().add(zonaValue);
-        
         HtmlOutputText coordenadasLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
         coordenadasLabel.setId("coordenadasLabel");
         coordenadasLabel.setValue("Coordenadas:");
@@ -525,6 +525,17 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         this.shelter = shelter;
     }
     
+    public List<TipoNodo> ShelterBean.completeTipoNodo(String query) {
+        List<TipoNodo> suggestions = new ArrayList<TipoNodo>();
+        for (TipoNodo tipoNodo : TipoNodo.findAllTipoNodoes()) {
+            String tipoNodoStr = String.valueOf(tipoNodo.getNombre());
+            if (tipoNodoStr.toLowerCase().startsWith(query.toLowerCase())) {
+                suggestions.add(tipoNodo);
+            }
+        }
+        return suggestions;
+    }
+    
     public List<Tecnico> ShelterBean.completeResponsable(String query) {
         List<Tecnico> suggestions = new ArrayList<Tecnico>();
         for (Tecnico tecnico : Tecnico.findAllTecnicoes()) {
@@ -542,17 +553,6 @@ privileged aspect ShelterBean_Roo_ManagedBean {
             String localidadStr = String.valueOf(localidad.getNombre());
             if (localidadStr.toLowerCase().startsWith(query.toLowerCase())) {
                 suggestions.add(localidad);
-            }
-        }
-        return suggestions;
-    }
-    
-    public List<Zona> ShelterBean.completeZona(String query) {
-        List<Zona> suggestions = new ArrayList<Zona>();
-        for (Zona zona : Zona.findAllZonas()) {
-            String zonaStr = String.valueOf(zona.getNombre() +  " "  + zona.getDescripcion());
-            if (zonaStr.toLowerCase().startsWith(query.toLowerCase())) {
-                suggestions.add(zona);
             }
         }
         return suggestions;

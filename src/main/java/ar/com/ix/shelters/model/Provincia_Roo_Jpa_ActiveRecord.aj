@@ -3,97 +3,97 @@
 
 package ar.com.ix.shelters.model;
 
-import ar.com.ix.shelters.model.Shelter;
+import ar.com.ix.shelters.model.Provincia;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.springframework.transaction.annotation.Transactional;
 
-privileged aspect Shelter_Roo_Jpa_ActiveRecord {
+privileged aspect Provincia_Roo_Jpa_ActiveRecord {
     
     @PersistenceContext
-    transient EntityManager Shelter.entityManager;
+    transient EntityManager Provincia.entityManager;
     
-    public static final List<String> Shelter.fieldNames4OrderClauseFilter = java.util.Arrays.asList("tipoNodo", "nodo", "codigoSitio", "modelo", "responsable", "localidad", "coordenadas");
+    public static final List<String> Provincia.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nombre");
     
-    public static final EntityManager Shelter.entityManager() {
-        EntityManager em = new Shelter().entityManager;
+    public static final EntityManager Provincia.entityManager() {
+        EntityManager em = new Provincia().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
         return em;
     }
     
-    public static long Shelter.countShelters() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM Shelter o", Long.class).getSingleResult();
+    public static long Provincia.countProvincias() {
+        return entityManager().createQuery("SELECT COUNT(o) FROM Provincia o", Long.class).getSingleResult();
     }
     
-    public static List<Shelter> Shelter.findAllShelters() {
-        return entityManager().createQuery("SELECT o FROM Shelter o", Shelter.class).getResultList();
+    public static List<Provincia> Provincia.findAllProvincias() {
+        return entityManager().createQuery("SELECT o FROM Provincia o", Provincia.class).getResultList();
     }
     
-    public static List<Shelter> Shelter.findAllShelters(String sortFieldName, String sortOrder) {
-        String jpaQuery = "SELECT o FROM Shelter o";
+    public static List<Provincia> Provincia.findAllProvincias(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Provincia o";
         if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
             jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
             if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
                 jpaQuery = jpaQuery + " " + sortOrder;
             }
         }
-        return entityManager().createQuery(jpaQuery, Shelter.class).getResultList();
+        return entityManager().createQuery(jpaQuery, Provincia.class).getResultList();
     }
     
-    public static Shelter Shelter.findShelter(Long id) {
+    public static Provincia Provincia.findProvincia(Long id) {
         if (id == null) return null;
-        return entityManager().find(Shelter.class, id);
+        return entityManager().find(Provincia.class, id);
     }
     
-    public static List<Shelter> Shelter.findShelterEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM Shelter o", Shelter.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    public static List<Provincia> Provincia.findProvinciaEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("SELECT o FROM Provincia o", Provincia.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
-    public static List<Shelter> Shelter.findShelterEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
-        String jpaQuery = "SELECT o FROM Shelter o";
+    public static List<Provincia> Provincia.findProvinciaEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Provincia o";
         if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
             jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
             if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
                 jpaQuery = jpaQuery + " " + sortOrder;
             }
         }
-        return entityManager().createQuery(jpaQuery, Shelter.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return entityManager().createQuery(jpaQuery, Provincia.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional
-    public void Shelter.persist() {
+    public void Provincia.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.persist(this);
     }
     
     @Transactional
-    public void Shelter.remove() {
+    public void Provincia.remove() {
         if (this.entityManager == null) this.entityManager = entityManager();
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Shelter attached = Shelter.findShelter(this.id);
+            Provincia attached = Provincia.findProvincia(this.id);
             this.entityManager.remove(attached);
         }
     }
     
     @Transactional
-    public void Shelter.flush() {
+    public void Provincia.flush() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.flush();
     }
     
     @Transactional
-    public void Shelter.clear() {
+    public void Provincia.clear() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.clear();
     }
     
     @Transactional
-    public Shelter Shelter.merge() {
+    public Provincia Provincia.merge() {
         if (this.entityManager == null) this.entityManager = entityManager();
-        Shelter merged = this.entityManager.merge(this);
+        Provincia merged = this.entityManager.merge(this);
         this.entityManager.flush();
         return merged;
     }

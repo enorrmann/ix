@@ -14,7 +14,7 @@ privileged aspect Localidad_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Localidad.entityManager;
     
-    public static final List<String> Localidad.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nombre");
+    public static final List<String> Localidad.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nombre", "departamento");
     
     public static final EntityManager Localidad.entityManager() {
         EntityManager em = new Localidad().entityManager;

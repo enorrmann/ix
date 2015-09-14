@@ -7,9 +7,17 @@ jpa setup --database HYPERSONIC_PERSISTENT --provider HIBERNATE
 entity jpa --class ~.model.Zona
 field string --fieldName nombre
 field string --fieldName descripcion
+// PROVINCIAS
+entity jpa --class ~.model.Provincia
+field string --fieldName nombre
+// DEPARTAMENTOS
+entity jpa --class ~.model.Departamento
+field string --fieldName nombre
+field reference --fieldName provincia --type ~.model.Provincia
 // LOCALIDADES
 entity jpa --class ~.model.Localidad
 field string --fieldName nombre
+field reference --fieldName departamento --type ~.model.Departamento
 // TECNICOS
 entity jpa --class ~.model.Tecnico
 field string --fieldName nombre
@@ -17,14 +25,18 @@ field string --fieldName domicilio
 field string --fieldName celular
 field reference --fieldName localidad --type ~.model.Localidad
 field reference --fieldName zona --type ~.model.Zona
+// TIPO NODO (Atendido, No Atendido, Data Center y Otros)
+entity jpa --class ~.model.TipoNodo
+field string --fieldName nombre
 // SHELTERS
 entity jpa --class ~.model.Shelter
+field reference --fieldName tipoNodo --type ~.model.TipoNodo
 field string --fieldName nodo
 field string --fieldName codigoSitio
 field string --fieldName modelo
 field reference --fieldName responsable --type ~.model.Tecnico
 field reference --fieldName localidad --type ~.model.Localidad
-field reference --fieldName zona --type ~.model.Zona
+// (no va) field reference --fieldName zona --type ~.model.Zona
 field string --fieldName coordenadas
 // CLIENTES
 entity jpa --class ~.model.Cliente

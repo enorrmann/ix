@@ -7,36 +7,14 @@ import javax.persistence.ManyToOne;
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
-public class Shelter {
+public class Departamento {
+
+    /**
+     */
+    private String nombre;
 
     /**
      */
     @ManyToOne
-    private TipoNodo tipoNodo;
-
-    /**
-     */
-    private String nodo;
-
-    /**
-     */
-    private String codigoSitio;
-
-    /**
-     */
-    private String modelo;
-
-    /**
-     */
-    @ManyToOne
-    private Tecnico responsable;
-
-    /**
-     */
-    @ManyToOne
-    private Localidad localidad;
-
-    /**
-     */
-    private String coordenadas;
+    private Provincia provincia;
 }

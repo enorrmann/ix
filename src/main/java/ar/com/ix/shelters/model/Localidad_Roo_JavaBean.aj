@@ -3,6 +3,7 @@
 
 package ar.com.ix.shelters.model;
 
+import ar.com.ix.shelters.model.Departamento;
 import ar.com.ix.shelters.model.Localidad;
 
 privileged aspect Localidad_Roo_JavaBean {
@@ -13,6 +14,14 @@ privileged aspect Localidad_Roo_JavaBean {
     
     public void Localidad.setNombre(String nombre) {
         this.nombre = nombre;
+    }
+    
+    public Departamento Localidad.getDepartamento() {
+        return this.departamento;
+    }
+    
+    public void Localidad.setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
     }
     
 }

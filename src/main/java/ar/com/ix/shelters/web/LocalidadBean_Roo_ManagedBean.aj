@@ -3,8 +3,10 @@
 
 package ar.com.ix.shelters.web;
 
+import ar.com.ix.shelters.model.Departamento;
 import ar.com.ix.shelters.model.Localidad;
 import ar.com.ix.shelters.web.LocalidadBean;
+import ar.com.ix.shelters.web.converter.DepartamentoConverter;
 import ar.com.ix.shelters.web.util.MessageFactory;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.component.html.HtmlOutputText;
 import javax.faces.component.html.HtmlPanelGrid;
 import javax.faces.context.FacesContext;
+import org.primefaces.component.autocomplete.AutoComplete;
 import org.primefaces.component.inputtext.InputText;
 import org.primefaces.component.message.Message;
 import org.primefaces.component.outputlabel.OutputLabel;
@@ -139,6 +142,30 @@ privileged aspect LocalidadBean_Roo_ManagedBean {
         nombreCreateInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(nombreCreateInputMessage);
         
+        OutputLabel departamentoCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        departamentoCreateOutput.setFor("departamentoCreateInput");
+        departamentoCreateOutput.setId("departamentoCreateOutput");
+        departamentoCreateOutput.setValue("Departamento:");
+        htmlPanelGrid.getChildren().add(departamentoCreateOutput);
+        
+        AutoComplete departamentoCreateInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
+        departamentoCreateInput.setId("departamentoCreateInput");
+        departamentoCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{localidadBean.localidad.departamento}", Departamento.class));
+        departamentoCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{localidadBean.completeDepartamento}", List.class, new Class[] { String.class }));
+        departamentoCreateInput.setDropdown(true);
+        departamentoCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "departamento", String.class));
+        departamentoCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{departamento.nombre}", String.class));
+        departamentoCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{departamento}", Departamento.class));
+        departamentoCreateInput.setConverter(new DepartamentoConverter());
+        departamentoCreateInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(departamentoCreateInput);
+        
+        Message departamentoCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        departamentoCreateInputMessage.setId("departamentoCreateInputMessage");
+        departamentoCreateInputMessage.setFor("departamentoCreateInput");
+        departamentoCreateInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(departamentoCreateInputMessage);
+        
         return htmlPanelGrid;
     }
     
@@ -168,6 +195,30 @@ privileged aspect LocalidadBean_Roo_ManagedBean {
         nombreEditInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(nombreEditInputMessage);
         
+        OutputLabel departamentoEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        departamentoEditOutput.setFor("departamentoEditInput");
+        departamentoEditOutput.setId("departamentoEditOutput");
+        departamentoEditOutput.setValue("Departamento:");
+        htmlPanelGrid.getChildren().add(departamentoEditOutput);
+        
+        AutoComplete departamentoEditInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
+        departamentoEditInput.setId("departamentoEditInput");
+        departamentoEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{localidadBean.localidad.departamento}", Departamento.class));
+        departamentoEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{localidadBean.completeDepartamento}", List.class, new Class[] { String.class }));
+        departamentoEditInput.setDropdown(true);
+        departamentoEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "departamento", String.class));
+        departamentoEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{departamento.nombre}", String.class));
+        departamentoEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{departamento}", Departamento.class));
+        departamentoEditInput.setConverter(new DepartamentoConverter());
+        departamentoEditInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(departamentoEditInput);
+        
+        Message departamentoEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        departamentoEditInputMessage.setId("departamentoEditInputMessage");
+        departamentoEditInputMessage.setFor("departamentoEditInput");
+        departamentoEditInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(departamentoEditInputMessage);
+        
         return htmlPanelGrid;
     }
     
@@ -189,6 +240,16 @@ privileged aspect LocalidadBean_Roo_ManagedBean {
         nombreValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{localidadBean.localidad.nombre}", String.class));
         htmlPanelGrid.getChildren().add(nombreValue);
         
+        HtmlOutputText departamentoLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        departamentoLabel.setId("departamentoLabel");
+        departamentoLabel.setValue("Departamento:");
+        htmlPanelGrid.getChildren().add(departamentoLabel);
+        
+        HtmlOutputText departamentoValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        departamentoValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{localidadBean.localidad.departamento}", Departamento.class));
+        departamentoValue.setConverter(new DepartamentoConverter());
+        htmlPanelGrid.getChildren().add(departamentoValue);
+        
         return htmlPanelGrid;
     }
     
@@ -201,6 +262,17 @@ privileged aspect LocalidadBean_Roo_ManagedBean {
     
     public void LocalidadBean.setLocalidad(Localidad localidad) {
         this.localidad = localidad;
+    }
+    
+    public List<Departamento> LocalidadBean.completeDepartamento(String query) {
+        List<Departamento> suggestions = new ArrayList<Departamento>();
+        for (Departamento departamento : Departamento.findAllDepartamentoes()) {
+            String departamentoStr = String.valueOf(departamento.getNombre());
+            if (departamentoStr.toLowerCase().startsWith(query.toLowerCase())) {
+                suggestions.add(departamento);
+            }
+        }
+        return suggestions;
     }
     
     public String LocalidadBean.onEdit() {

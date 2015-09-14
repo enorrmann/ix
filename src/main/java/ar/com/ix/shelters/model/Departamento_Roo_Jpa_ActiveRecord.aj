@@ -3,97 +3,97 @@
 
 package ar.com.ix.shelters.model;
 
-import ar.com.ix.shelters.model.Shelter;
+import ar.com.ix.shelters.model.Departamento;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.springframework.transaction.annotation.Transactional;
 
-privileged aspect Shelter_Roo_Jpa_ActiveRecord {
+privileged aspect Departamento_Roo_Jpa_ActiveRecord {
     
     @PersistenceContext
-    transient EntityManager Shelter.entityManager;
+    transient EntityManager Departamento.entityManager;
     
-    public static final List<String> Shelter.fieldNames4OrderClauseFilter = java.util.Arrays.asList("tipoNodo", "nodo", "codigoSitio", "modelo", "responsable", "localidad", "coordenadas");
+    public static final List<String> Departamento.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nombre", "provincia");
     
-    public static final EntityManager Shelter.entityManager() {
-        EntityManager em = new Shelter().entityManager;
+    public static final EntityManager Departamento.entityManager() {
+        EntityManager em = new Departamento().entityManager;
         if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
         return em;
     }
     
-    public static long Shelter.countShelters() {
-        return entityManager().createQuery("SELECT COUNT(o) FROM Shelter o", Long.class).getSingleResult();
+    public static long Departamento.countDepartamentoes() {
+        return entityManager().createQuery("SELECT COUNT(o) FROM Departamento o", Long.class).getSingleResult();
     }
     
-    public static List<Shelter> Shelter.findAllShelters() {
-        return entityManager().createQuery("SELECT o FROM Shelter o", Shelter.class).getResultList();
+    public static List<Departamento> Departamento.findAllDepartamentoes() {
+        return entityManager().createQuery("SELECT o FROM Departamento o", Departamento.class).getResultList();
     }
     
-    public static List<Shelter> Shelter.findAllShelters(String sortFieldName, String sortOrder) {
-        String jpaQuery = "SELECT o FROM Shelter o";
+    public static List<Departamento> Departamento.findAllDepartamentoes(String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Departamento o";
         if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
             jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
             if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
                 jpaQuery = jpaQuery + " " + sortOrder;
             }
         }
-        return entityManager().createQuery(jpaQuery, Shelter.class).getResultList();
+        return entityManager().createQuery(jpaQuery, Departamento.class).getResultList();
     }
     
-    public static Shelter Shelter.findShelter(Long id) {
+    public static Departamento Departamento.findDepartamento(Long id) {
         if (id == null) return null;
-        return entityManager().find(Shelter.class, id);
+        return entityManager().find(Departamento.class, id);
     }
     
-    public static List<Shelter> Shelter.findShelterEntries(int firstResult, int maxResults) {
-        return entityManager().createQuery("SELECT o FROM Shelter o", Shelter.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+    public static List<Departamento> Departamento.findDepartamentoEntries(int firstResult, int maxResults) {
+        return entityManager().createQuery("SELECT o FROM Departamento o", Departamento.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
-    public static List<Shelter> Shelter.findShelterEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
-        String jpaQuery = "SELECT o FROM Shelter o";
+    public static List<Departamento> Departamento.findDepartamentoEntries(int firstResult, int maxResults, String sortFieldName, String sortOrder) {
+        String jpaQuery = "SELECT o FROM Departamento o";
         if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
             jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
             if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
                 jpaQuery = jpaQuery + " " + sortOrder;
             }
         }
-        return entityManager().createQuery(jpaQuery, Shelter.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
+        return entityManager().createQuery(jpaQuery, Departamento.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
     }
     
     @Transactional
-    public void Shelter.persist() {
+    public void Departamento.persist() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.persist(this);
     }
     
     @Transactional
-    public void Shelter.remove() {
+    public void Departamento.remove() {
         if (this.entityManager == null) this.entityManager = entityManager();
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Shelter attached = Shelter.findShelter(this.id);
+            Departamento attached = Departamento.findDepartamento(this.id);
             this.entityManager.remove(attached);
         }
     }
     
     @Transactional
-    public void Shelter.flush() {
+    public void Departamento.flush() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.flush();
     }
     
     @Transactional
-    public void Shelter.clear() {
+    public void Departamento.clear() {
         if (this.entityManager == null) this.entityManager = entityManager();
         this.entityManager.clear();
     }
     
     @Transactional
-    public Shelter Shelter.merge() {
+    public Departamento Departamento.merge() {
         if (this.entityManager == null) this.entityManager = entityManager();
-        Shelter merged = this.entityManager.merge(this);
+        Departamento merged = this.entityManager.merge(this);
         this.entityManager.flush();
         return merged;
     }

@@ -6,9 +6,17 @@ package ar.com.ix.shelters.model;
 import ar.com.ix.shelters.model.Localidad;
 import ar.com.ix.shelters.model.Shelter;
 import ar.com.ix.shelters.model.Tecnico;
-import ar.com.ix.shelters.model.Zona;
+import ar.com.ix.shelters.model.TipoNodo;
 
 privileged aspect Shelter_Roo_JavaBean {
+    
+    public TipoNodo Shelter.getTipoNodo() {
+        return this.tipoNodo;
+    }
+    
+    public void Shelter.setTipoNodo(TipoNodo tipoNodo) {
+        this.tipoNodo = tipoNodo;
+    }
     
     public String Shelter.getNodo() {
         return this.nodo;
@@ -48,14 +56,6 @@ privileged aspect Shelter_Roo_JavaBean {
     
     public void Shelter.setLocalidad(Localidad localidad) {
         this.localidad = localidad;
-    }
-    
-    public Zona Shelter.getZona() {
-        return this.zona;
-    }
-    
-    public void Shelter.setZona(Zona zona) {
-        this.zona = zona;
     }
     
     public String Shelter.getCoordenadas() {
