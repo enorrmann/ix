@@ -28,8 +28,21 @@ public class Shelter {
 
     /**
      */
+    private String direccion;
+
+    /**
+     */
+    private String observaciones;
+
+    /**
+     */
     @ManyToOne
     private Tecnico responsable;
+
+    /**
+     */
+    @ManyToOne
+    private Tecnico contactoApertura;
 
     /**
      */

@@ -60,7 +60,8 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         columns.add("nodo");
         columns.add("codigoSitio");
         columns.add("modelo");
-        columns.add("coordenadas");
+        columns.add("direccion");
+        columns.add("observaciones");
     }
     
     public String ShelterBean.getName() {
@@ -209,6 +210,42 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         modeloCreateInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(modeloCreateInputMessage);
         
+        OutputLabel direccionCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        direccionCreateOutput.setFor("direccionCreateInput");
+        direccionCreateOutput.setId("direccionCreateOutput");
+        direccionCreateOutput.setValue("Direccion:");
+        htmlPanelGrid.getChildren().add(direccionCreateOutput);
+        
+        InputText direccionCreateInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
+        direccionCreateInput.setId("direccionCreateInput");
+        direccionCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.direccion}", String.class));
+        direccionCreateInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(direccionCreateInput);
+        
+        Message direccionCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        direccionCreateInputMessage.setId("direccionCreateInputMessage");
+        direccionCreateInputMessage.setFor("direccionCreateInput");
+        direccionCreateInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(direccionCreateInputMessage);
+        
+        OutputLabel observacionesCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        observacionesCreateOutput.setFor("observacionesCreateInput");
+        observacionesCreateOutput.setId("observacionesCreateOutput");
+        observacionesCreateOutput.setValue("Observaciones:");
+        htmlPanelGrid.getChildren().add(observacionesCreateOutput);
+        
+        InputText observacionesCreateInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
+        observacionesCreateInput.setId("observacionesCreateInput");
+        observacionesCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.observaciones}", String.class));
+        observacionesCreateInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(observacionesCreateInput);
+        
+        Message observacionesCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        observacionesCreateInputMessage.setId("observacionesCreateInputMessage");
+        observacionesCreateInputMessage.setFor("observacionesCreateInput");
+        observacionesCreateInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(observacionesCreateInputMessage);
+        
         OutputLabel responsableCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         responsableCreateOutput.setFor("responsableCreateInput");
         responsableCreateOutput.setId("responsableCreateOutput");
@@ -232,6 +269,30 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         responsableCreateInputMessage.setFor("responsableCreateInput");
         responsableCreateInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(responsableCreateInputMessage);
+        
+        OutputLabel contactoAperturaCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        contactoAperturaCreateOutput.setFor("contactoAperturaCreateInput");
+        contactoAperturaCreateOutput.setId("contactoAperturaCreateOutput");
+        contactoAperturaCreateOutput.setValue("Contacto Apertura:");
+        htmlPanelGrid.getChildren().add(contactoAperturaCreateOutput);
+        
+        AutoComplete contactoAperturaCreateInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
+        contactoAperturaCreateInput.setId("contactoAperturaCreateInput");
+        contactoAperturaCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.contactoApertura}", Tecnico.class));
+        contactoAperturaCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{shelterBean.completeContactoApertura}", List.class, new Class[] { String.class }));
+        contactoAperturaCreateInput.setDropdown(true);
+        contactoAperturaCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "contactoApertura", String.class));
+        contactoAperturaCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{contactoApertura.nombre} #{contactoApertura.domicilio} #{contactoApertura.celular}", String.class));
+        contactoAperturaCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{contactoApertura}", Tecnico.class));
+        contactoAperturaCreateInput.setConverter(new TecnicoConverter());
+        contactoAperturaCreateInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(contactoAperturaCreateInput);
+        
+        Message contactoAperturaCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        contactoAperturaCreateInputMessage.setId("contactoAperturaCreateInputMessage");
+        contactoAperturaCreateInputMessage.setFor("contactoAperturaCreateInput");
+        contactoAperturaCreateInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(contactoAperturaCreateInputMessage);
         
         OutputLabel localidadCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         localidadCreateOutput.setFor("localidadCreateInput");
@@ -364,6 +425,42 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         modeloEditInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(modeloEditInputMessage);
         
+        OutputLabel direccionEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        direccionEditOutput.setFor("direccionEditInput");
+        direccionEditOutput.setId("direccionEditOutput");
+        direccionEditOutput.setValue("Direccion:");
+        htmlPanelGrid.getChildren().add(direccionEditOutput);
+        
+        InputText direccionEditInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
+        direccionEditInput.setId("direccionEditInput");
+        direccionEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.direccion}", String.class));
+        direccionEditInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(direccionEditInput);
+        
+        Message direccionEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        direccionEditInputMessage.setId("direccionEditInputMessage");
+        direccionEditInputMessage.setFor("direccionEditInput");
+        direccionEditInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(direccionEditInputMessage);
+        
+        OutputLabel observacionesEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        observacionesEditOutput.setFor("observacionesEditInput");
+        observacionesEditOutput.setId("observacionesEditOutput");
+        observacionesEditOutput.setValue("Observaciones:");
+        htmlPanelGrid.getChildren().add(observacionesEditOutput);
+        
+        InputText observacionesEditInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
+        observacionesEditInput.setId("observacionesEditInput");
+        observacionesEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.observaciones}", String.class));
+        observacionesEditInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(observacionesEditInput);
+        
+        Message observacionesEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        observacionesEditInputMessage.setId("observacionesEditInputMessage");
+        observacionesEditInputMessage.setFor("observacionesEditInput");
+        observacionesEditInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(observacionesEditInputMessage);
+        
         OutputLabel responsableEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         responsableEditOutput.setFor("responsableEditInput");
         responsableEditOutput.setId("responsableEditOutput");
@@ -387,6 +484,30 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         responsableEditInputMessage.setFor("responsableEditInput");
         responsableEditInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(responsableEditInputMessage);
+        
+        OutputLabel contactoAperturaEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        contactoAperturaEditOutput.setFor("contactoAperturaEditInput");
+        contactoAperturaEditOutput.setId("contactoAperturaEditOutput");
+        contactoAperturaEditOutput.setValue("Contacto Apertura:");
+        htmlPanelGrid.getChildren().add(contactoAperturaEditOutput);
+        
+        AutoComplete contactoAperturaEditInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
+        contactoAperturaEditInput.setId("contactoAperturaEditInput");
+        contactoAperturaEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.contactoApertura}", Tecnico.class));
+        contactoAperturaEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{shelterBean.completeContactoApertura}", List.class, new Class[] { String.class }));
+        contactoAperturaEditInput.setDropdown(true);
+        contactoAperturaEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "contactoApertura", String.class));
+        contactoAperturaEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{contactoApertura.nombre} #{contactoApertura.domicilio} #{contactoApertura.celular}", String.class));
+        contactoAperturaEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{contactoApertura}", Tecnico.class));
+        contactoAperturaEditInput.setConverter(new TecnicoConverter());
+        contactoAperturaEditInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(contactoAperturaEditInput);
+        
+        Message contactoAperturaEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        contactoAperturaEditInputMessage.setId("contactoAperturaEditInputMessage");
+        contactoAperturaEditInputMessage.setFor("contactoAperturaEditInput");
+        contactoAperturaEditInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(contactoAperturaEditInputMessage);
         
         OutputLabel localidadEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         localidadEditOutput.setFor("localidadEditInput");
@@ -481,6 +602,26 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         modeloValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.modelo}", String.class));
         htmlPanelGrid.getChildren().add(modeloValue);
         
+        HtmlOutputText direccionLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        direccionLabel.setId("direccionLabel");
+        direccionLabel.setValue("Direccion:");
+        htmlPanelGrid.getChildren().add(direccionLabel);
+        
+        HtmlOutputText direccionValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        direccionValue.setId("direccionValue");
+        direccionValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.direccion}", String.class));
+        htmlPanelGrid.getChildren().add(direccionValue);
+        
+        HtmlOutputText observacionesLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        observacionesLabel.setId("observacionesLabel");
+        observacionesLabel.setValue("Observaciones:");
+        htmlPanelGrid.getChildren().add(observacionesLabel);
+        
+        HtmlOutputText observacionesValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        observacionesValue.setId("observacionesValue");
+        observacionesValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.observaciones}", String.class));
+        htmlPanelGrid.getChildren().add(observacionesValue);
+        
         HtmlOutputText responsableLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
         responsableLabel.setId("responsableLabel");
         responsableLabel.setValue("Responsable:");
@@ -490,6 +631,16 @@ privileged aspect ShelterBean_Roo_ManagedBean {
         responsableValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.responsable}", Tecnico.class));
         responsableValue.setConverter(new TecnicoConverter());
         htmlPanelGrid.getChildren().add(responsableValue);
+        
+        HtmlOutputText contactoAperturaLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        contactoAperturaLabel.setId("contactoAperturaLabel");
+        contactoAperturaLabel.setValue("Contacto Apertura:");
+        htmlPanelGrid.getChildren().add(contactoAperturaLabel);
+        
+        HtmlOutputText contactoAperturaValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        contactoAperturaValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{shelterBean.shelter.contactoApertura}", Tecnico.class));
+        contactoAperturaValue.setConverter(new TecnicoConverter());
+        htmlPanelGrid.getChildren().add(contactoAperturaValue);
         
         HtmlOutputText localidadLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
         localidadLabel.setId("localidadLabel");
@@ -537,6 +688,17 @@ privileged aspect ShelterBean_Roo_ManagedBean {
     }
     
     public List<Tecnico> ShelterBean.completeResponsable(String query) {
+        List<Tecnico> suggestions = new ArrayList<Tecnico>();
+        for (Tecnico tecnico : Tecnico.findAllTecnicoes()) {
+            String tecnicoStr = String.valueOf(tecnico.getNombre() +  " "  + tecnico.getDomicilio() +  " "  + tecnico.getCelular());
+            if (tecnicoStr.toLowerCase().startsWith(query.toLowerCase())) {
+                suggestions.add(tecnico);
+            }
+        }
+        return suggestions;
+    }
+    
+    public List<Tecnico> ShelterBean.completeContactoApertura(String query) {
         List<Tecnico> suggestions = new ArrayList<Tecnico>();
         for (Tecnico tecnico : Tecnico.findAllTecnicoes()) {
             String tecnicoStr = String.valueOf(tecnico.getNombre() +  " "  + tecnico.getDomicilio() +  " "  + tecnico.getCelular());

@@ -20,15 +20,39 @@
           <f:param value="Shelters" />
         </h:outputFormat>
         <p:dataTable id="list" value="#{shelterBean.allShelters}" var="shelter" rendered="#{shelterBean.dataVisible}" resizableColumns="false" paginator="true" paginatorTemplate=" {CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}" rowsPerPageTemplate="5,10,25,50" rows="10">
-          <p:columns value="#{shelterBean.columns}" var="column" columnIndexVar="colIndex">
-            <f:facet name="header">
-              <h:outputText value="#{applicationBean.getColumnName(column)}" />
-            </f:facet>
-            <h:outputText value="#{shelter[column]}" />
-          </p:columns>
-          
-          <p:column headerText="Zona">
-            #{shelter.zona.nombre}
+        
+          <p:column headerText="Tipo Nodo">
+            #{shelter.tipoNodo.nombre}
+          </p:column>
+
+          <p:column headerText="Codigo sitio">
+            #{shelter.codigoSitio}
+          </p:column>
+
+          <p:column headerText="Responsable">
+            #{shelter.responsable.nombre}<br/>
+            #{shelter.responsable.celular}
+          </p:column>
+
+          <p:column headerText="Contacto apertura">
+            #{shelter.contactoApertura.nombre}<br/>
+            #{shelter.contactoApertura.celular}
+          </p:column>
+
+          <p:column headerText="Localidad">
+            #{shelter.localidad.nombre}
+          </p:column>
+
+          <p:column headerText="Departamento">
+            #{shelter.localidad.departamento.nombre}
+          </p:column>
+
+          <p:column headerText="Provincia">
+            #{shelter.localidad.departamento.provincia.nombre}
+          </p:column>
+
+          <p:column headerText="Direccion">
+            #{shelter.direccion}
           </p:column>
 
           <p:column styleClass="action-column">

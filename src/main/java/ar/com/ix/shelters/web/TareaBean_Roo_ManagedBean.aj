@@ -189,7 +189,7 @@ privileged aspect TareaBean_Roo_ManagedBean {
         shelterCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{tareaBean.completeShelter}", List.class, new Class[] { String.class }));
         shelterCreateInput.setDropdown(true);
         shelterCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "shelter", String.class));
-        shelterCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{shelter.nodo} #{shelter.codigoSitio} #{shelter.modelo} #{shelter.coordenadas}", String.class));
+        shelterCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{shelter.nodo} #{shelter.codigoSitio} #{shelter.modelo} #{shelter.direccion}", String.class));
         shelterCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{shelter}", Shelter.class));
         shelterCreateInput.setConverter(new ShelterConverter());
         shelterCreateInput.setRequired(false);
@@ -368,7 +368,7 @@ privileged aspect TareaBean_Roo_ManagedBean {
         shelterEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{tareaBean.completeShelter}", List.class, new Class[] { String.class }));
         shelterEditInput.setDropdown(true);
         shelterEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "shelter", String.class));
-        shelterEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{shelter.nodo} #{shelter.codigoSitio} #{shelter.modelo} #{shelter.coordenadas}", String.class));
+        shelterEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{shelter.nodo} #{shelter.codigoSitio} #{shelter.modelo} #{shelter.direccion}", String.class));
         shelterEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{shelter}", Shelter.class));
         shelterEditInput.setConverter(new ShelterConverter());
         shelterEditInput.setRequired(false);
@@ -605,7 +605,7 @@ privileged aspect TareaBean_Roo_ManagedBean {
     public List<Shelter> TareaBean.completeShelter(String query) {
         List<Shelter> suggestions = new ArrayList<Shelter>();
         for (Shelter shelter : Shelter.findAllShelters()) {
-            String shelterStr = String.valueOf(shelter.getNodo() +  " "  + shelter.getCodigoSitio() +  " "  + shelter.getModelo() +  " "  + shelter.getCoordenadas());
+            String shelterStr = String.valueOf(shelter.getNodo() +  " "  + shelter.getCodigoSitio() +  " "  + shelter.getModelo() +  " "  + shelter.getDireccion());
             if (shelterStr.toLowerCase().startsWith(query.toLowerCase())) {
                 suggestions.add(shelter);
             }

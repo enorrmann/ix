@@ -34,7 +34,10 @@ field reference --fieldName tipoNodo --type ~.model.TipoNodo
 field string --fieldName nodo
 field string --fieldName codigoSitio
 field string --fieldName modelo
+field string --fieldName direccion
+field string --fieldName observaciones
 field reference --fieldName responsable --type ~.model.Tecnico
+field reference --fieldName contactoApertura --type ~.model.Tecnico
 field reference --fieldName localidad --type ~.model.Localidad
 // (no va) field reference --fieldName zona --type ~.model.Zona
 field string --fieldName coordenadas

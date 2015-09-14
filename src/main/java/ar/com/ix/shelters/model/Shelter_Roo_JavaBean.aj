@@ -42,12 +42,36 @@ privileged aspect Shelter_Roo_JavaBean {
         this.modelo = modelo;
     }
     
+    public String Shelter.getDireccion() {
+        return this.direccion;
+    }
+    
+    public void Shelter.setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    
+    public String Shelter.getObservaciones() {
+        return this.observaciones;
+    }
+    
+    public void Shelter.setObservaciones(String observaciones) {
+        this.observaciones = observaciones;
+    }
+    
     public Tecnico Shelter.getResponsable() {
         return this.responsable;
     }
     
     public void Shelter.setResponsable(Tecnico responsable) {
         this.responsable = responsable;
+    }
+    
+    public Tecnico Shelter.getContactoApertura() {
+        return this.contactoApertura;
+    }
+    
+    public void Shelter.setContactoApertura(Tecnico contactoApertura) {
+        this.contactoApertura = contactoApertura;
     }
     
     public Localidad Shelter.getLocalidad() {

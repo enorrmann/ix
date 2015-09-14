@@ -215,7 +215,7 @@ privileged aspect MovimientoBean_Roo_ManagedBean {
         shelterDestinoCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{movimientoBean.completeShelterDestino}", List.class, new Class[] { String.class }));
         shelterDestinoCreateInput.setDropdown(true);
         shelterDestinoCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "shelterDestino", String.class));
-        shelterDestinoCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{shelterDestino.nodo} #{shelterDestino.codigoSitio} #{shelterDestino.modelo} #{shelterDestino.coordenadas}", String.class));
+        shelterDestinoCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{shelterDestino.nodo} #{shelterDestino.codigoSitio} #{shelterDestino.modelo} #{shelterDestino.direccion}", String.class));
         shelterDestinoCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{shelterDestino}", Shelter.class));
         shelterDestinoCreateInput.setConverter(new ShelterConverter());
         shelterDestinoCreateInput.setRequired(false);
@@ -361,7 +361,7 @@ privileged aspect MovimientoBean_Roo_ManagedBean {
         shelterDestinoEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{movimientoBean.completeShelterDestino}", List.class, new Class[] { String.class }));
         shelterDestinoEditInput.setDropdown(true);
         shelterDestinoEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "shelterDestino", String.class));
-        shelterDestinoEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{shelterDestino.nodo} #{shelterDestino.codigoSitio} #{shelterDestino.modelo} #{shelterDestino.coordenadas}", String.class));
+        shelterDestinoEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{shelterDestino.nodo} #{shelterDestino.codigoSitio} #{shelterDestino.modelo} #{shelterDestino.direccion}", String.class));
         shelterDestinoEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{shelterDestino}", Shelter.class));
         shelterDestinoEditInput.setConverter(new ShelterConverter());
         shelterDestinoEditInput.setRequired(false);
@@ -527,7 +527,7 @@ privileged aspect MovimientoBean_Roo_ManagedBean {
     public List<Shelter> MovimientoBean.completeShelterDestino(String query) {
         List<Shelter> suggestions = new ArrayList<Shelter>();
         for (Shelter shelter : Shelter.findAllShelters()) {
-            String shelterStr = String.valueOf(shelter.getNodo() +  " "  + shelter.getCodigoSitio() +  " "  + shelter.getModelo() +  " "  + shelter.getCoordenadas());
+            String shelterStr = String.valueOf(shelter.getNodo() +  " "  + shelter.getCodigoSitio() +  " "  + shelter.getModelo() +  " "  + shelter.getDireccion());
             if (shelterStr.toLowerCase().startsWith(query.toLowerCase())) {
                 suggestions.add(shelter);
             }

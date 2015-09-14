@@ -14,7 +14,7 @@ privileged aspect Shelter_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Shelter.entityManager;
     
-    public static final List<String> Shelter.fieldNames4OrderClauseFilter = java.util.Arrays.asList("tipoNodo", "nodo", "codigoSitio", "modelo", "responsable", "localidad", "coordenadas");
+    public static final List<String> Shelter.fieldNames4OrderClauseFilter = java.util.Arrays.asList("tipoNodo", "nodo", "codigoSitio", "modelo", "direccion", "observaciones", "responsable", "contactoApertura", "localidad", "coordenadas");
     
     public static final EntityManager Shelter.entityManager() {
         EntityManager em = new Shelter().entityManager;
