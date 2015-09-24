@@ -20,15 +20,33 @@
           <f:param value="Componentes" />
         </h:outputFormat>
         <p:dataTable id="list" value="#{componenteBean.allComponentes}" var="componente" rendered="#{componenteBean.dataVisible}" resizableColumns="false" paginator="true" paginatorTemplate=" {CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}" rowsPerPageTemplate="5,10,25,50" rows="10">
-          <p:columns value="#{componenteBean.columns}" var="column" columnIndexVar="colIndex">
-            <f:facet name="header">
-              <h:outputText value="#{applicationBean.getColumnName(column)}" />
-            </f:facet>
-            <h:outputText value="#{componente[column]}" />
-          </p:columns>
+          <p:column>
+            <f:facet name="header">Cod Itx</f:facet>
+            <h:outputText value="#{componente.numeroItx}">
+          </h:outputText>
+          </p:column>
+          <p:column>
+            <f:facet name="header">Descripcion</f:facet>
+            <h:outputText value="#{componente.descripcion}">
+            </h:outputText>
+          </p:column>
+          <p:column>
+            <f:facet name="header">Num Serie</f:facet>
+            <h:outputText value="#{componente.numeroDeSerie}">
+            </h:outputText>
+          </p:column>
+          <p:column>
+            <f:facet name="header">Fabricante</f:facet>
+            <h:outputText value="#{componente.fabricante.nombre}"/>
+          </p:column>
+          <p:column>
+            <f:facet name="header">Observaciones</f:facet>
+            <h:outputText value="#{componente.observaciones}"/>
+          </p:column>
+
           <p:column styleClass="action-column">
             <f:facet name="header">
-              <h:outputText value="Actions" />
+              <h:outputText value="#{messages.label_actions}" />
             </f:facet>
             <p:commandButton id="viewButton" icon="ui-icon-zoomin" update=":viewForm:viewPanelGrid" oncomplete="viewDialogWidget.show()" title="#{messages.label_view}">
               <f:setPropertyActionListener value="#{componente}" target="#{componenteBean.componente}" />
