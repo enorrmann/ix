@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<ui:composition template="../templates/layout.xhtml">
+  <ui:define name="content">
+  <h:form prependId="false" id="dataForm">
+  <p:panel id="data">
+    <f:facet name="header">Shelter</f:facet>
+    
+  <h:panelGrid columns="4" styleClass="dialog" columnClasses="col1,col2,col1,col2">
+  <h:outputText value="Tipo Nodo:"/><h:outputText value="#{shelterBean.shelter.tipoNodo.nombre}"/>
+  <h:outputText value="Codigo Sitio:"/><h:outputText value="#{shelterBean.shelter.codigoSitio}"/>
+  <h:outputText value="Responsable Tecnico:"/><h:outputText value="#{shelterBean.shelter.responsable.nombre} #{shelterBean.shelter.responsable.celular}"/>
+  <h:outputText value="Contacto de apertura:"/><h:outputText value="#{shelterBean.shelter.contactoApertura.nombre} #{shelterBean.shelter.contactoApertura.celular}"/>
+  <h:outputText value="Localidad:"/><h:outputText value="#{shelterBean.shelter.localidad.nombre}"/>
+  <h:outputText value="Departamento:"/><h:outputText value="#{shelterBean.shelter.localidad.departamento.nombre}"/>
+  <h:outputText value="Provincia:"/><h:outputText value="#{shelterBean.shelter.localidad.departamento.provincia.nombre}"/>
+  <h:outputText value="Direccion:"/><h:outputText value="#{shelterBean.shelter.direccion}"/>
+  <h:outputText value="Coordenadas:"/><h:outputText value="#{shelterBean.shelter.coordenadas}"/>
+
+    </h:panelGrid>
+    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+  <p:gmap center="#{shelterBean.shelter.coordenadas}" zoom="15" type="MAP" style="width:100%;height:400px" model="#{mapUtil.getMapModel(shelterBean.shelter.coordenadas)}" />
+  </p:panel>
+  </h:form>
+  </ui:define>
+</ui:composition>
+</html>

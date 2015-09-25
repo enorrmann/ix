@@ -59,7 +59,8 @@
             <f:facet name="header">
               <h:outputText value="#{messages.label_actions}" />
             </f:facet>
-            <p:commandButton id="viewButton" icon="ui-icon-zoomin" update=":viewForm:viewPanelGrid" oncomplete="viewDialogWidget.show()" title="#{messages.label_view}">
+
+            <p:commandButton id="viewButton" ajax="false" icon="ui-icon-zoomin" title="#{messages.label_view}" action="shelter_view">
               <f:setPropertyActionListener value="#{shelter}" target="#{shelterBean.shelter}" />
             </p:commandButton>
             <p:tooltip for="viewButton" value="#{messages.label_view}" showEffect="fade" hideEffect="fade" />
