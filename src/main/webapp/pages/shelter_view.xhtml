@@ -9,8 +9,7 @@
 <ui:composition template="../templates/layout.xhtml">
   <ui:define name="content">
   <h:form prependId="false" id="dataForm">
-  <p:panel id="data">
-    <f:facet name="header">Shelter</f:facet>
+  <p:panel id="data"><f:facet name="header">Shelter</f:facet>
     
   <h:panelGrid columns="4" styleClass="dialog" columnClasses="col1,col2,col1,col2">
   <h:outputText value="Tipo Nodo:"/><h:outputText value="#{shelterBean.shelter.tipoNodo.nombre}"/>
@@ -25,8 +24,39 @@
 
     </h:panelGrid>
     <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-  <p:gmap center="#{shelterBean.shelter.coordenadas}" zoom="15" type="MAP" style="width:100%;height:400px" model="#{mapUtil.getMapModel(shelterBean.shelter.coordenadas)}" />
-  </p:panel>
+
+        <p:dataTable id="list" value="#{shelterBean.shelter.componentes}" var="componente">
+        <f:facet name="header">Componentes</f:facet>
+          <p:column>
+            <f:facet name="header">Cod Itx</f:facet>
+            <h:outputText value="#{componente.numeroItx}">
+          </h:outputText>
+          </p:column>
+          <p:column>
+            <f:facet name="header">Descripcion</f:facet>
+            <h:outputText value="#{componente.descripcion}">
+            </h:outputText>
+          </p:column>
+          <p:column>
+            <f:facet name="header">Num Serie</f:facet>
+            <h:outputText value="#{componente.numeroDeSerie}">
+            </h:outputText>
+          </p:column>
+          <p:column>
+            <f:facet name="header">Fabricante</f:facet>
+            <h:outputText value="#{componente.fabricante.nombre}"/>
+          </p:column>
+          <p:column>
+            <f:facet name="header">Observaciones</f:facet>
+            <h:outputText value="#{componente.observaciones}"/>
+          </p:column>
+          </p:dataTable>
+          
+        <p:gmap center="#{shelterBean.shelter.coordenadas}" zoom="15" type="MAP" style="width:100%;height:400px" model="#{mapUtil.getMapModel(shelterBean.shelter.coordenadas)}">
+          <f:facet name="header">Ubicacion</f:facet>
+        </p:gmap>
+    
+</p:panel>
   </h:form>
   </ui:define>
 </ui:composition>

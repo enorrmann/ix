@@ -5,8 +5,10 @@ package ar.com.ix.shelters.web;
 
 import ar.com.ix.shelters.model.Componente;
 import ar.com.ix.shelters.model.Fabricante;
+import ar.com.ix.shelters.model.Shelter;
 import ar.com.ix.shelters.web.ComponenteBean;
 import ar.com.ix.shelters.web.converter.FabricanteConverter;
+import ar.com.ix.shelters.web.converter.ShelterConverter;
 import ar.com.ix.shelters.web.util.MessageFactory;
 import java.util.ArrayList;
 import java.util.List;
@@ -205,6 +207,30 @@ privileged aspect ComponenteBean_Roo_ManagedBean {
         fabricanteCreateInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(fabricanteCreateInputMessage);
         
+        OutputLabel shelterCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        shelterCreateOutput.setFor("shelterCreateInput");
+        shelterCreateOutput.setId("shelterCreateOutput");
+        shelterCreateOutput.setValue("Shelter:");
+        htmlPanelGrid.getChildren().add(shelterCreateOutput);
+        
+        AutoComplete shelterCreateInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
+        shelterCreateInput.setId("shelterCreateInput");
+        shelterCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{componenteBean.componente.shelter}", Shelter.class));
+        shelterCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{componenteBean.completeShelter}", List.class, new Class[] { String.class }));
+        shelterCreateInput.setDropdown(true);
+        shelterCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "shelter", String.class));
+        shelterCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{shelter.nodo} #{shelter.codigoSitio} #{shelter.modelo} #{shelter.direccion}", String.class));
+        shelterCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{shelter}", Shelter.class));
+        shelterCreateInput.setConverter(new ShelterConverter());
+        shelterCreateInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(shelterCreateInput);
+        
+        Message shelterCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        shelterCreateInputMessage.setId("shelterCreateInputMessage");
+        shelterCreateInputMessage.setFor("shelterCreateInput");
+        shelterCreateInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(shelterCreateInputMessage);
+        
         OutputLabel observacionesCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         observacionesCreateOutput.setFor("observacionesCreateInput");
         observacionesCreateOutput.setId("observacionesCreateOutput");
@@ -312,6 +338,30 @@ privileged aspect ComponenteBean_Roo_ManagedBean {
         fabricanteEditInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(fabricanteEditInputMessage);
         
+        OutputLabel shelterEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        shelterEditOutput.setFor("shelterEditInput");
+        shelterEditOutput.setId("shelterEditOutput");
+        shelterEditOutput.setValue("Shelter:");
+        htmlPanelGrid.getChildren().add(shelterEditOutput);
+        
+        AutoComplete shelterEditInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
+        shelterEditInput.setId("shelterEditInput");
+        shelterEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{componenteBean.componente.shelter}", Shelter.class));
+        shelterEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{componenteBean.completeShelter}", List.class, new Class[] { String.class }));
+        shelterEditInput.setDropdown(true);
+        shelterEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "shelter", String.class));
+        shelterEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{shelter.nodo} #{shelter.codigoSitio} #{shelter.modelo} #{shelter.direccion}", String.class));
+        shelterEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{shelter}", Shelter.class));
+        shelterEditInput.setConverter(new ShelterConverter());
+        shelterEditInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(shelterEditInput);
+        
+        Message shelterEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        shelterEditInputMessage.setId("shelterEditInputMessage");
+        shelterEditInputMessage.setFor("shelterEditInput");
+        shelterEditInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(shelterEditInputMessage);
+        
         OutputLabel observacionesEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         observacionesEditOutput.setFor("observacionesEditInput");
         observacionesEditOutput.setId("observacionesEditOutput");
@@ -381,6 +431,16 @@ privileged aspect ComponenteBean_Roo_ManagedBean {
         fabricanteValue.setConverter(new FabricanteConverter());
         htmlPanelGrid.getChildren().add(fabricanteValue);
         
+        HtmlOutputText shelterLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        shelterLabel.setId("shelterLabel");
+        shelterLabel.setValue("Shelter:");
+        htmlPanelGrid.getChildren().add(shelterLabel);
+        
+        HtmlOutputText shelterValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        shelterValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{componenteBean.componente.shelter}", Shelter.class));
+        shelterValue.setConverter(new ShelterConverter());
+        htmlPanelGrid.getChildren().add(shelterValue);
+        
         HtmlOutputText observacionesLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
         observacionesLabel.setId("observacionesLabel");
         observacionesLabel.setValue("Observaciones:");
@@ -411,6 +471,17 @@ privileged aspect ComponenteBean_Roo_ManagedBean {
             String fabricanteStr = String.valueOf(fabricante.getNombre());
             if (fabricanteStr.toLowerCase().startsWith(query.toLowerCase())) {
                 suggestions.add(fabricante);
+            }
+        }
+        return suggestions;
+    }
+    
+    public List<Shelter> ComponenteBean.completeShelter(String query) {
+        List<Shelter> suggestions = new ArrayList<Shelter>();
+        for (Shelter shelter : Shelter.findAllShelters()) {
+            String shelterStr = String.valueOf(shelter.getNodo() +  " "  + shelter.getCodigoSitio() +  " "  + shelter.getModelo() +  " "  + shelter.getDireccion());
+            if (shelterStr.toLowerCase().startsWith(query.toLowerCase())) {
+                suggestions.add(shelter);
             }
         }
         return suggestions;

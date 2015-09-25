@@ -11,3 +11,4 @@ cp $BACKUP_FOLDER/pages/* $PROJECT_HOME/src/main/webapp/pages
 cp $BACKUP_FOLDER/templates/* $PROJECT_HOME/src/main/webapp/templates
 cp $BACKUP_FOLDER/css/* $PROJECT_HOME/src/main/webapp/resources/css
 cp $BACKUP_FOLDER/java/web/* $PROJECT_HOME/src/main/java/ar/com/ix/shelters/web
+cp $BACKUP_FOLDER/java/model/* $PROJECT_HOME/src/main/java/ar/com/ix/shelters/model

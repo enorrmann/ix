@@ -61,6 +61,7 @@ field string --fieldName numeroItx
 field string --fieldName descripcion
 field string --fieldName numeroDeSerie
 field reference --fieldName fabricante --type ~.model.Fabricante
+field reference --fieldName shelter --type ~.model.Shelter
 field string --fieldName observaciones
 // ESTADO DE LAS TAREAS
 entity jpa --class ~.model.EstadoTarea

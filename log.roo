@@ -1,4 +1,4 @@
-// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2015-09-14 14:43:57
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2015-09-25 15:45:30
 project --topLevelPackage ar.com.ix.shelters
 jpa setup --database HYPERSONIC_PERSISTENT --provider HIBERNATE
 entity jpa --class ~.model.Zona
@@ -47,6 +47,7 @@ field string --fieldName numeroItx
 field string --fieldName descripcion
 field string --fieldName numeroDeSerie
 field reference --fieldName fabricante --type ~.model.Fabricante
+field reference --fieldName shelter --type ~.model.Shelter
 field string --fieldName observaciones
 entity jpa --class ~.model.EstadoTarea
 field string --fieldName nombre
@@ -70,4 +71,4 @@ web jsf setup --library PRIMEFACES --implementation ORACLE_MOJARRA --theme BLACK
 web jsf all --package ~.web
 // script /home/enorrmann/git/ix/init/backup.roo
 quit
-// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2015-09-14 14:44:10
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2015-09-25 15:45:46

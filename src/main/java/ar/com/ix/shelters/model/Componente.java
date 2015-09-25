@@ -28,5 +28,10 @@ public class Componente {
 
     /**
      */
+    @ManyToOne
+    private Shelter shelter;
+
+    /**
+     */
     private String observaciones;
 }

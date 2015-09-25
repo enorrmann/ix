@@ -5,6 +5,7 @@ package ar.com.ix.shelters.model;
 
 import ar.com.ix.shelters.model.Componente;
 import ar.com.ix.shelters.model.Fabricante;
+import ar.com.ix.shelters.model.Shelter;
 
 privileged aspect Componente_Roo_JavaBean {
     
@@ -38,6 +39,14 @@ privileged aspect Componente_Roo_JavaBean {
     
     public void Componente.setFabricante(Fabricante fabricante) {
         this.fabricante = fabricante;
+    }
+    
+    public Shelter Componente.getShelter() {
+        return this.shelter;
+    }
+    
+    public void Componente.setShelter(Shelter shelter) {
+        this.shelter = shelter;
     }
     
     public String Componente.getObservaciones() {
