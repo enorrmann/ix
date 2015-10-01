@@ -14,7 +14,7 @@ privileged aspect Movimiento_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Movimiento.entityManager;
     
-    public static final List<String> Movimiento.fieldNames4OrderClauseFilter = java.util.Arrays.asList("componente", "fechaEnvio", "ubicacionDestino", "shelterDestino", "observaciones", "destinatario");
+    public static final List<String> Movimiento.fieldNames4OrderClauseFilter = java.util.Arrays.asList("componente", "fechaEnvio", "shelterDestino", "observaciones", "destinatario");
     
     public static final EntityManager Movimiento.entityManager() {
         EntityManager em = new Movimiento().entityManager;

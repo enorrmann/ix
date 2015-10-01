@@ -7,12 +7,10 @@ import ar.com.ix.shelters.model.Componente;
 import ar.com.ix.shelters.model.Movimiento;
 import ar.com.ix.shelters.model.Shelter;
 import ar.com.ix.shelters.model.Tecnico;
-import ar.com.ix.shelters.model.Ubicacion;
 import ar.com.ix.shelters.web.MovimientoBean;
 import ar.com.ix.shelters.web.converter.ComponenteConverter;
 import ar.com.ix.shelters.web.converter.ShelterConverter;
 import ar.com.ix.shelters.web.converter.TecnicoConverter;
-import ar.com.ix.shelters.web.converter.UbicacionConverter;
 import ar.com.ix.shelters.web.util.MessageFactory;
 import java.util.ArrayList;
 import java.util.Date;
@@ -179,30 +177,6 @@ privileged aspect MovimientoBean_Roo_ManagedBean {
         fechaEnvioCreateInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(fechaEnvioCreateInputMessage);
         
-        OutputLabel ubicacionDestinoCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
-        ubicacionDestinoCreateOutput.setFor("ubicacionDestinoCreateInput");
-        ubicacionDestinoCreateOutput.setId("ubicacionDestinoCreateOutput");
-        ubicacionDestinoCreateOutput.setValue("Ubicacion Destino:");
-        htmlPanelGrid.getChildren().add(ubicacionDestinoCreateOutput);
-        
-        AutoComplete ubicacionDestinoCreateInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
-        ubicacionDestinoCreateInput.setId("ubicacionDestinoCreateInput");
-        ubicacionDestinoCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{movimientoBean.movimiento.ubicacionDestino}", Ubicacion.class));
-        ubicacionDestinoCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{movimientoBean.completeUbicacionDestino}", List.class, new Class[] { String.class }));
-        ubicacionDestinoCreateInput.setDropdown(true);
-        ubicacionDestinoCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "ubicacionDestino", String.class));
-        ubicacionDestinoCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{ubicacionDestino.nombre} #{ubicacionDestino.descripcion}", String.class));
-        ubicacionDestinoCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{ubicacionDestino}", Ubicacion.class));
-        ubicacionDestinoCreateInput.setConverter(new UbicacionConverter());
-        ubicacionDestinoCreateInput.setRequired(false);
-        htmlPanelGrid.getChildren().add(ubicacionDestinoCreateInput);
-        
-        Message ubicacionDestinoCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
-        ubicacionDestinoCreateInputMessage.setId("ubicacionDestinoCreateInputMessage");
-        ubicacionDestinoCreateInputMessage.setFor("ubicacionDestinoCreateInput");
-        ubicacionDestinoCreateInputMessage.setDisplay("icon");
-        htmlPanelGrid.getChildren().add(ubicacionDestinoCreateInputMessage);
-        
         OutputLabel shelterDestinoCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         shelterDestinoCreateOutput.setFor("shelterDestinoCreateInput");
         shelterDestinoCreateOutput.setId("shelterDestinoCreateOutput");
@@ -325,30 +299,6 @@ privileged aspect MovimientoBean_Roo_ManagedBean {
         fechaEnvioEditInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(fechaEnvioEditInputMessage);
         
-        OutputLabel ubicacionDestinoEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
-        ubicacionDestinoEditOutput.setFor("ubicacionDestinoEditInput");
-        ubicacionDestinoEditOutput.setId("ubicacionDestinoEditOutput");
-        ubicacionDestinoEditOutput.setValue("Ubicacion Destino:");
-        htmlPanelGrid.getChildren().add(ubicacionDestinoEditOutput);
-        
-        AutoComplete ubicacionDestinoEditInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
-        ubicacionDestinoEditInput.setId("ubicacionDestinoEditInput");
-        ubicacionDestinoEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{movimientoBean.movimiento.ubicacionDestino}", Ubicacion.class));
-        ubicacionDestinoEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{movimientoBean.completeUbicacionDestino}", List.class, new Class[] { String.class }));
-        ubicacionDestinoEditInput.setDropdown(true);
-        ubicacionDestinoEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "ubicacionDestino", String.class));
-        ubicacionDestinoEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{ubicacionDestino.nombre} #{ubicacionDestino.descripcion}", String.class));
-        ubicacionDestinoEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{ubicacionDestino}", Ubicacion.class));
-        ubicacionDestinoEditInput.setConverter(new UbicacionConverter());
-        ubicacionDestinoEditInput.setRequired(false);
-        htmlPanelGrid.getChildren().add(ubicacionDestinoEditInput);
-        
-        Message ubicacionDestinoEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
-        ubicacionDestinoEditInputMessage.setId("ubicacionDestinoEditInputMessage");
-        ubicacionDestinoEditInputMessage.setFor("ubicacionDestinoEditInput");
-        ubicacionDestinoEditInputMessage.setDisplay("icon");
-        htmlPanelGrid.getChildren().add(ubicacionDestinoEditInputMessage);
-        
         OutputLabel shelterDestinoEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         shelterDestinoEditOutput.setFor("shelterDestinoEditInput");
         shelterDestinoEditOutput.setId("shelterDestinoEditOutput");
@@ -448,16 +398,6 @@ privileged aspect MovimientoBean_Roo_ManagedBean {
         fechaEnvioValue.setConverter(fechaEnvioValueConverter);
         htmlPanelGrid.getChildren().add(fechaEnvioValue);
         
-        HtmlOutputText ubicacionDestinoLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
-        ubicacionDestinoLabel.setId("ubicacionDestinoLabel");
-        ubicacionDestinoLabel.setValue("Ubicacion Destino:");
-        htmlPanelGrid.getChildren().add(ubicacionDestinoLabel);
-        
-        HtmlOutputText ubicacionDestinoValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
-        ubicacionDestinoValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{movimientoBean.movimiento.ubicacionDestino}", Ubicacion.class));
-        ubicacionDestinoValue.setConverter(new UbicacionConverter());
-        htmlPanelGrid.getChildren().add(ubicacionDestinoValue);
-        
         HtmlOutputText shelterDestinoLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
         shelterDestinoLabel.setId("shelterDestinoLabel");
         shelterDestinoLabel.setValue("Shelter Destino:");
@@ -508,17 +448,6 @@ privileged aspect MovimientoBean_Roo_ManagedBean {
             String componenteStr = String.valueOf(componente.getNumeroItx() +  " "  + componente.getDescripcion() +  " "  + componente.getNumeroDeSerie() +  " "  + componente.getObservaciones());
             if (componenteStr.toLowerCase().startsWith(query.toLowerCase())) {
                 suggestions.add(componente);
-            }
-        }
-        return suggestions;
-    }
-    
-    public List<Ubicacion> MovimientoBean.completeUbicacionDestino(String query) {
-        List<Ubicacion> suggestions = new ArrayList<Ubicacion>();
-        for (Ubicacion ubicacion : Ubicacion.findAllUbicacions()) {
-            String ubicacionStr = String.valueOf(ubicacion.getNombre() +  " "  + ubicacion.getDescripcion());
-            if (ubicacionStr.toLowerCase().startsWith(query.toLowerCase())) {
-                suggestions.add(ubicacion);
             }
         }
         return suggestions;

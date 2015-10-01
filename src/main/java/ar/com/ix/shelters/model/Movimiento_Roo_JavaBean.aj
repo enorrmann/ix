@@ -7,7 +7,6 @@ import ar.com.ix.shelters.model.Componente;
 import ar.com.ix.shelters.model.Movimiento;
 import ar.com.ix.shelters.model.Shelter;
 import ar.com.ix.shelters.model.Tecnico;
-import ar.com.ix.shelters.model.Ubicacion;
 import java.util.Date;
 
 privileged aspect Movimiento_Roo_JavaBean {
@@ -26,14 +25,6 @@ privileged aspect Movimiento_Roo_JavaBean {
     
     public void Movimiento.setFechaEnvio(Date fechaEnvio) {
         this.fechaEnvio = fechaEnvio;
-    }
-    
-    public Ubicacion Movimiento.getUbicacionDestino() {
-        return this.ubicacionDestino;
-    }
-    
-    public void Movimiento.setUbicacionDestino(Ubicacion ubicacionDestino) {
-        this.ubicacionDestino = ubicacionDestino;
     }
     
     public Shelter Movimiento.getShelterDestino() {

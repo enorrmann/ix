@@ -27,11 +27,6 @@ public class Movimiento {
     /**
      */
     @ManyToOne
-    private Ubicacion ubicacionDestino;
-
-    /**
-     */
-    @ManyToOne
     private Shelter shelterDestino;
 
     /**

@@ -52,9 +52,9 @@ field string --fieldName telFax
 entity jpa --class ~.model.Fabricante
 field string --fieldName nombre
 // Ubicaciones
-entity jpa --class ~.model.Ubicacion
-field string --fieldName nombre
-field string --fieldName descripcion
+//entity jpa --class ~.model.Ubicacion
+//field string --fieldName nombre
+//field string --fieldName descripcion
 // COMPONENTES
 entity jpa --class ~.model.Componente
 field string --fieldName numeroItx
@@ -74,7 +74,7 @@ entity jpa --class ~.model.Movimiento
 field reference --fieldName componente --type ~.model.Componente
 field date --fieldName fechaEnvio --type java.util.Date  --dateFormat MEDIUM --timeFormat NONE --persistenceType JPA_DATE
 //field reference --fieldName estadoEnvio --type ~.model.EstadoMovimiento
-field reference --fieldName ubicacionDestino --type ~.model.Ubicacion
+//field reference --fieldName ubicacionDestino --type ~.model.Ubicacion
 field reference --fieldName shelterDestino --type ~.model.Shelter
 field string --fieldName observaciones
 field reference --fieldName destinatario --type ~.model.Tecnico

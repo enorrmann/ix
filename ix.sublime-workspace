@@ -1,0 +1,894 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/main/java/ar/com/ix/shelters/web/ApplicationBean.java",
+			"settings":
+			{
+				"buffer_size": 18357,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "init/java/web/ApplicationBean.java",
+			"settings":
+			{
+				"buffer_size": 18357,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "init/pages/shelter.xhtml",
+			"settings":
+			{
+				"buffer_size": 6914,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{\"a\":{\"remoteUser\":\"prufull\",\"params\":{\"arg0\":\"2\"},\"paramTypes\":{\"arg0\":\"java.lang.Long\"}}}",
+			"settings":
+			{
+				"buffer_size": 91,
+				"line_ending": "Unix",
+				"name": "{\"a\":{\"remoteUser\":\"prufull\",\"params\":{\"arg0\":\"2\"}"
+			}
+		},
+		{
+			"file": "init/backup.roo",
+			"settings":
+			{
+				"buffer_size": 3918,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/bash.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/User/bash.sublime-build",
+					""
+				],
+				[
+					"Packages/User/mvn-clean-install.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/bash.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/bash.sublime-build",
+					""
+				],
+				[
+					"Packages/User/mvn.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/bash.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 96.0,
+		"last_filter": "menu",
+		"selected_items":
+		[
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/enorrmann/git/ix",
+		"/home/enorrmann/git/ix/init",
+		"/home/enorrmann/git/ix/init/java",
+		"/home/enorrmann/git/ix/init/java/web",
+		"/home/enorrmann/git/ix/init/pages"
+	],
+	"file_history":
+	[
+		"/home/enorrmann/.cache/.fr-xDwlic/WEB-INF/web.xml",
+		"/home/enorrmann/git/ix/init/messages_es.properties",
+		"/home/enorrmann/git/ix/target/classes/ar/com/ix/shelters/web/i18n/messages_en.properties",
+		"/home/enorrmann/git/ix/init/java/web/ApplicationBean.java",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ApplicationBean.java",
+		"/home/enorrmann/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/shelter_view.xhtml",
+		"/home/enorrmann/git/ix/init/build.sh",
+		"/home/enorrmann/git/ix/init/backup.roo",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ShelterViewBean.java",
+		"/home/enorrmann/git/ix/init/java/web/ShelterViewBean.java",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Shelter.java",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/shelter.xhtml",
+		"/home/enorrmann/git/ix/init/pages/componente.xhtml",
+		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/target/cargos-logica-rmi-0.0.1-SNAPSHOT/WEB-INF/web.xml",
+		"/home/enorrmann/workspace_gf3/cargos/CargoEJBModule/ejbModule/META-INF/ejb-jar.xml",
+		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/EjbInjector.java",
+		"/home/enorrmann/workspace_gf3/cargos.sublime-project",
+		"/home/enorrmann/workspace_gf3/remoteutils/src/main/java/org/educacion/remoteutils/CallDescriptor.java",
+		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/RmiFacadeRest.java",
+		"/home/enorrmann/workspace_gf3/SigaeRemoteRealm/src/ar/gov/santafe/realms/SigaeRemoteRealm.java",
+		"/home/enorrmann/workspace_gf3/SigaeRemoteRealm/src/ar/gov/santafe/realms/LoginModule.java",
+		"/home/enorrmann/git/ix/init/pages/shelter.xhtml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/componente.xhtml",
+		"/home/enorrmann/git/ix/init/pages/xcomponente.xhtml",
+		"/home/enorrmann/workspace_gf3/mci_cargos.sh",
+		"/home/enorrmann/workspace_gf3/cargos/pom.xml",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/entityListeners/EntityChangeListener.java",
+		"/home/enorrmann/workspace_gf3/remoteutils/src/main/java/org/educacion/remoteutils/RmiInterceptor.java",
+		"/home/enorrmann/desarrollo/glassfish3/glassfish/domains/domain1/logs/server.log",
+		"/home/enorrmann/workspace_gf3/cargos-logica/pom.xml",
+		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/pom.xml",
+		"/home/enorrmann/workspace_gf3/remoteutils/src/main/java/org/educacion/remoteutils/RemoteApi.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/resources/META-INF/persistence.xml",
+		"/home/enorrmann/workspace_gf3/remoteutils/src/main/java/org/educacion/remoteutils/JsonMapper.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/pom.xml",
+		"/home/enorrmann/workspace_gf3/remoteutils/src/main/java/org/educacion/remoteutils/LocalInjector.java",
+		"/home/enorrmann/suenio_de_barrio_clean.txt",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/dto/GenericDto.java",
+		"/home/enorrmann/desarrollo/up/mda/lib/edu/mda/utils/GenericDataProvider.java",
+		"/home/enorrmann/desarrollo/up/mda/war/WEB-INF/classes/edu/mda/utils/GenericDataModel.java",
+		"/home/enorrmann/desarrollo/up/mda/war/WEB-INF/classes/edu/mda/datamodel/BusquedaTicketsDataModel.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/matricula/InscripcionCarrera.java",
+		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/src/main/webapp/WEB-INF/web.xml",
+		"/home/enorrmann/workspace_gf3/cargos/CargosWeb/src/main/webapp/cargos.jsp",
+		"/home/enorrmann/Escritorio/todo.txt",
+		"/home/enorrmann/desarrollo/glassfish3/glassfish/domains/domain1/applications/cargos-ear-1.0.6/cargos-web_war/cargos.jsp",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/reubicaciones/dto/PersonaCargoDTO.java",
+		"/home/enorrmann/workspace_gf3/remoteutils/pom.xml",
+		"/home/enorrmann/workspace_gf3/remoteutils/src/main/java/org/educacion/remoteutils/EsMocking.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/personas/Persona.java",
+		"/home/enorrmann/workspace_gf3/cargos/CargoEJBModule/ejbModule/org/educacion/cargos/CargoSearchEjbLocal.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/reubicaciones/dto/HsAsignadasDto.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/Privilegio.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/Sistema.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/GrupoUsuario.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/seguridad/UsuarioGrupo.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/reubicaciones/DetalleSolicitud.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/reubicaciones/SolicitudReubicacion.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/reubicaciones/dto/PlazaDto.java",
+		"/home/enorrmann/workspace_gf3/cargos/CargoEJBModule/ejbModule/org/educacion/cargos/CargoSearchEjb.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/PrivilegioXUsuario.java",
+		"/home/enorrmann/workspace_gf3/cargos/CargosWeb/src/main/java/org/educacion/cargos/BaseBean.java",
+		"/home/enorrmann/workspace_gf3/sigae-web-logic/sigae-web-logic-rest/src/main/java/ar/gov/santafe/meduc/sigae/logica/rest/EjbInjector.java",
+		"/home/enorrmann/workspace_gf3/sigae-web-logic/pom.xml",
+		"/home/enorrmann/workspace_gf3/sigae-web-logic/.project",
+		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeLocalSecciones.java",
+		"/home/enorrmann/workspace_gf3/Sigae/Sigae-web/src/main/java/org/sigae/SeccionesBean.java",
+		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/MovimientoAlumnoEJB.java",
+		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeBeanSecciones.java",
+		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeBean.java",
+		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/AlumnoPlazaEJB.java",
+		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/CarrerasFacadeBean.java",
+		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeLocal.java",
+		"/home/enorrmann/workspace_gf3/autodeploy_cargos.sh",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/target/classes/META-INF/persistence.xml",
+		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/LocalInjector.java",
+		"/home/enorrmann/.cache/.fr-sb1FbG/META-INF/application.xml",
+		"/home/enorrmann/.cache/.fr-VGSzLg/META-INF/application.xml",
+		"/home/enorrmann/workspace_gf3/inscripciones-logica/inscripciones-logica-rmi/pom.xml",
+		"/home/enorrmann/.cache/.fr-4tRRRz/WEB-INF/sun-web.xml",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/Instalacion.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/InstalacionXGrupo.java",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/PresetXInstalacion.java",
+		"/home/enorrmann/Escritorio/logs/server.log_2015-09-01T07-56-01",
+		"/home/enorrmann/Escritorio/logs/server.log",
+		"/home/enorrmann/workspace_gf3/cargos/CargoEJBModule/ejbModule/org/educacion/cargos/report/ReportEjb.java",
+		"/home/enorrmann/desarrollo/glassfish3/glassfish/domains/domain1/config/domain.xml",
+		"/home/enorrmann/Dropbox/PROYECTOS/shelter2web/pages/componente.xhtml",
+		"/home/enorrmann/desarrollo/shelter2web/src/main/webapp/pages/componente.xhtml",
+		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/Usuario.java",
+		"/home/enorrmann/Escritorio/error.titulos",
+		"/home/enorrmann/desarrollo/glassfish3/glassfish/domains/domain1/logs/server.log_2015-08-28T10-33-12",
+		"/home/enorrmann/desarrollo/glassfish3/glassfish/domains/domain1/logs/server.log_2015-07-30T09-12-09",
+		"/home/enorrmann/.cache/.fr-W1WTwD/META-INF/ejb-jar.xml",
+		"/home/enorrmann/.cache/.fr-geLo8Y/META-INF/application.xml",
+		"/home/enorrmann/.cache/.fr-gEf5UN/META-INF/application.xml",
+		"/home/enorrmann/.cache/.fr-sv5mG5/META-INF/persistence.xml",
+		"/home/enorrmann/.cache/.fr-gnjeKv/META-INF/persistence.xml",
+		"/home/enorrmann/.cache/.fr-R6NrP4/META-INF/persistence.xml",
+		"/home/enorrmann/.cache/.fr-vbdLPe/META-INF/ejb-jar.xml",
+		"/home/enorrmann/.cache/.fr-N89Xqw/META-INF/ejb-jar.xml",
+		"/home/enorrmann/.cache/.fr-XLrDqH/META-INF/ejb-jar.xml",
+		"/home/enorrmann/.cache/.fr-zuCC49/META-INF/ejb-jar.xml",
+		"/home/enorrmann/.cache/.fr-Qyhw93/META-INF/ejb-jar.xml",
+		"/home/enorrmann/.cache/.fr-3XzaK9/META-INF/ejb-jar.xml",
+		"/home/enorrmann/.config/sublime-text-3/Packages/User/bash.sublime-build",
+		"/home/enorrmann/workspace_gf3/mci.sh",
+		"/home/enorrmann/desarrollo/Mavha.Web/Scripts/www/index.html",
+		"/home/enorrmann/.cache/.fr-DRTWZ6/WEB-INF/classes/META-INF/spring/applicationContext.xml",
+		"/home/enorrmann/desarrollo/Mavha.Web/Index.html",
+		"/home/enorrmann/.cache/.fr-l6guSW/WEB-INF/web.xml",
+		"/home/enorrmann/.cache/.fr-RYGRz3/WEB-INF/web.xml",
+		"/home/enorrmann/.cache/.fr-aEhYZ8/WEB-INF/faces-config.xml",
+		"/home/enorrmann/.cache/.fr-xmu3oX/META-INF/ejb-jar.xml",
+		"/home/enorrmann/.cache/.fr-9IPXVB/META-INF/ejb-jar.xml",
+		"/home/enorrmann/.cache/.fr-YngCMH/META-INF/ejb-jar.xml",
+		"/home/enorrmann/desarrollo/shelter2web/src/main/webapp/pages/shelter.xhtml",
+		"/home/enorrmann/desarrollo/shelter2web/src/main/webapp/pages/envio.xhtml",
+		"/home/enorrmann/Dropbox/PROYECTOS/lubricentro coqui/LubricentroJsf/src/main/webapp/pages/detalleCompra.xhtml",
+		"/home/enorrmann/desarrollo/shelter2web/src/main/resources/META-INF/persistence.xml",
+		"/home/enorrmann/.cache/.fr-XGKWFH/META-INF/ejb-jar.xml",
+		"/home/enorrmann/Dropbox/PROYECTOS/shelter2web/messages_es.properties",
+		"/home/enorrmann/desarrollo/shelter2web/build.sh",
+		"/home/enorrmann/desarrollo/shelter2web/src/main/resources/ar/com/norrmann/shelter2web/web/i18n/messages_es.properties",
+		"/home/enorrmann/Dropbox/PROYECTOS/shelter2web/src/main/resources/META-INF/persistence.xml",
+		"/home/enorrmann/Dropbox/PROYECTOS/shelter2web/src/main/resources/META-INF/spring/applicationContext.xml",
+		"/home/enorrmann/Dropbox/PROYECTOS/shelter2web/src/main/resources/ar/com/norrmann/shelter2web/web/i18n/messages_es.properties"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"*.java",
+			"*.xml",
+			"*",
+			"*.java",
+			"*"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			" ",
+			"ubica",
+			"shelter",
+			"open",
+			"ejbcontext",
+			"implements GenericDataProvider",
+			"GenericDataProvider",
+			"parametros",
+			"GenericDataProvider",
+			"dataProvider",
+			"parametros",
+			"put(",
+			"usuario",
+			"isSplitAnualAllowed",
+			"getCalificacionesPosiblesXCarrera",
+			"jsonignore",
+			"ignore",
+			"map",
+			"getfrenteaulaall",
+			"public",
+			"\"jsonid\"",
+			"jsonid",
+			"esIniciacion",
+			"ES_INICIACION",
+			"facescontext",
+			"GrupoAlumnoFacadeLocal",
+			"GrupoAlumnoFacadeBeanSecciones",
+			"GrupoAlumnoFacadeLocal",
+			"seccionesEJB",
+			"GrupoAlumnoFacadeLocal",
+			"GrupoAlumnoFacadeBeanSecciones",
+			"titulos",
+			"JsonIgnore",
+			"jsonignore",
+			"@JsonIdentityInfo",
+			"dataSource",
+			"datasource",
+			"persona",
+			"usuario",
+			"%22",
+			"getusu",
+			"504b",
+			"realm",
+			"primefaces",
+			"tipo_item",
+			"primefaces",
+			"tipoitem",
+			"item",
+			"primeface",
+			"primef",
+			"[#|",
+			"%7D",
+			"%7B",
+			"%22",
+			"detalleList",
+			"\"id\"",
+			"[]",
+			"detallel",
+			"\\\"",
+			"\"",
+			"%22",
+			" = ",
+			"public static final Long ID_",
+			"	public static final Long ID_",
+			"@id",
+			"incluirNoActivas",
+			"getOrganismo",
+			"Organismo",
+			"organismo",
+			"TU_PASSWORD",
+			"TU_USUARIO",
+			"TU_PASSWORD",
+			"TU_USUARIO"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"\"",
+			"}",
+			"{",
+			"\"",
+			"\\\"",
+			"\"",
+			"",
+			"AP4kP372K2dZbBQyoCAPgeAR9eb",
+			"enorrmann",
+			"41262199aaAA",
+			"enorrmann"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/main/java/ar/com/ix/shelters/web/ApplicationBean.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18357,
+								18357
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5008.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "init/java/web/ApplicationBean.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18357,
+								18357
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5170.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "init/pages/shelter.xhtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6914,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1903,
+								1903
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 91,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								91,
+								91
+							]
+						],
+						"settings":
+						{
+							"auto_name": "{\"a\":{\"remoteUser\":\"prufull\",\"params\":{\"arg0\":\"2\"}",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "init/backup.roo",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3918,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2071,
+								2071
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 500.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 165.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ix.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"messa",
+				"target/classes/ar/com/ix/shelters/web/i18n/messages_en.properties"
+			],
+			[
+				"appli",
+				"src/main/java/ar/com/ix/shelters/web/ApplicationBean.java"
+			],
+			[
+				"shelter.java",
+				"src/main/java/ar/com/ix/shelters/model/Shelter.java"
+			],
+			[
+				"shelterv",
+				"src/main/java/ar/com/ix/shelters/web/ShelterViewBean.java"
+			],
+			[
+				"compon",
+				"init/pages/componente.xhtml"
+			],
+			[
+				"shelter",
+				"src/main/webapp/pages/shelter.xhtml"
+			],
+			[
+				"sheltervi",
+				"src/main/java/ar/com/ix/shelters/web/ShelterViewBean.java"
+			],
+			[
+				"sigaeremote",
+				"SigaeRemoteRealm/src/ar/gov/santafe/realms/SigaeRemoteRealm.java"
+			],
+			[
+				"calldescriptor",
+				"remoteutils/src/main/java/org/educacion/remoteutils/CallDescriptor.java"
+			],
+			[
+				"ejbinjector",
+				"cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/EjbInjector.java"
+			],
+			[
+				"web",
+				"cargos-logica/cargos-logica-rmi/target/cargos-logica-rmi-0.0.1-SNAPSHOT/WEB-INF/web.xml"
+			],
+			[
+				"rmi",
+				"cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/RmiFacadeRest.java"
+			],
+			[
+				"entity",
+				"EntidadesEducacion/src/main/java/modelo/entityListeners/EntityChangeListener.java"
+			],
+			[
+				"rmifa",
+				"cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/RmiFacadeRest.java"
+			],
+			[
+				"rmiin",
+				"remoteutils/src/main/java/org/educacion/remoteutils/RmiInterceptor.java"
+			],
+			[
+				"entit",
+				"EntidadesEducacion/src/main/java/modelo/entityListeners/EntityChangeListener.java"
+			],
+			[
+				"remoteapi",
+				"remoteutils/src/main/java/org/educacion/remoteutils/RemoteApi.java"
+			],
+			[
+				"localin",
+				"remoteutils/src/main/java/org/educacion/remoteutils/LocalInjector.java"
+			],
+			[
+				"jsonma",
+				"remoteutils/src/main/java/org/educacion/remoteutils/JsonMapper.java"
+			],
+			[
+				"entityc",
+				"EntidadesEducacion/src/main/java/modelo/entityListeners/EntityChangeListener.java"
+			],
+			[
+				"generidc",
+				"EntidadesEducacion/src/main/java/modelo/dto/GenericDto.java"
+			],
+			[
+				"genericdto",
+				"EntidadesEducacion/src/main/java/modelo/dto/GenericDto.java"
+			],
+			[
+				"genericdataprovider",
+				"mda/lib/edu/mda/utils/GenericDataProvider.java"
+			],
+			[
+				"busquedati",
+				"mda/war/WEB-INF/classes/edu/mda/datamodel/BusquedaTicketsDataModel.java"
+			],
+			[
+				"genericdatamo",
+				"mda/war/WEB-INF/classes/edu/mda/utils/GenericDataModel.java"
+			],
+			[
+				"insc",
+				"EntidadesEducacion/src/main/java/modelo/matricula/InscripcionCarrera.java"
+			],
+			[
+				"cargos.",
+				"cargos/CargosWeb/src/main/webapp/cargos.jsp"
+			],
+			[
+				"personac",
+				"EntidadesEducacion/src/main/java/modelo/reubicaciones/dto/PersonaCargoDTO.java"
+			],
+			[
+				"rmiinterceptor",
+				"remoteutils/src/main/java/org/educacion/remoteutils/RmiInterceptor.java"
+			],
+			[
+				"persona",
+				"EntidadesEducacion/src/main/java/modelo/personas/Persona.java"
+			],
+			[
+				"calldesc",
+				"remoteutils/src/main/java/org/educacion/remoteutils/CallDescriptor.java"
+			],
+			[
+				"cargose",
+				"cargos/CargoEJBModule/ejbModule/org/educacion/cargos/CargoSearchEjbLocal.java"
+			],
+			[
+				"",
+				"remoteutils/src/main/java/org/educacion/remoteutils/RmiInterceptor.java"
+			],
+			[
+				"hsasi",
+				"EntidadesEducacion/src/main/java/modelo/reubicaciones/dto/HsAsignadasDto.java"
+			],
+			[
+				"cargos",
+				"cargos/CargoEJBModule/ejbModule/org/educacion/cargos/CargoSearchEjb.java"
+			],
+			[
+				"privilegio",
+				"EntidadesEducacion/src/main/java/modelo/administracion/Privilegio.java"
+			],
+			[
+				"ssitema",
+				"EntidadesEducacion/src/main/java/modelo/administracion/Sistema.java"
+			],
+			[
+				"grupou",
+				"EntidadesEducacion/src/main/java/modelo/administracion/GrupoUsuario.java"
+			],
+			[
+				"usuario",
+				"EntidadesEducacion/src/main/java/modelo/seguridad/UsuarioGrupo.java"
+			],
+			[
+				"privile",
+				"EntidadesEducacion/src/main/java/modelo/administracion/PrivilegioXUsuario.java"
+			],
+			[
+				"detallesolicitud",
+				"EntidadesEducacion/src/main/java/modelo/reubicaciones/DetalleSolicitud.java"
+			],
+			[
+				"dto",
+				"EntidadesEducacion/src/main/java/modelo/reubicaciones/dto/PlazaDto.java"
+			],
+			[
+				"grupoalumnofacadelocalsecciones",
+				"Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeLocalSecciones.java"
+			],
+			[
+				"seccionesbean",
+				"Sigae-web/src/main/java/org/sigae/SeccionesBean.java"
+			],
+			[
+				"alum",
+				"Sigae-ejb/src/main/java/org/educacion/sigae/ejb/AlumnoPlazaEJB.java"
+			],
+			[
+				"grupoalumnof",
+				"Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeBean.java"
+			],
+			[
+				"grupoalumnofacadebean",
+				"Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeBeanSecciones.java"
+			],
+			[
+				"grupoalumnofacade",
+				"Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeBean.java"
+			],
+			[
+				"grupoalumno",
+				"Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeLocal.java"
+			],
+			[
+				"persis",
+				"EntidadesEducacion/src/main/resources/META-INF/persistence.xml"
+			],
+			[
+				"sistema",
+				"EntidadesEducacion/src/main/java/modelo/administracion/Sistema.java"
+			],
+			[
+				"instalacionxgrupo",
+				"EntidadesEducacion/src/main/java/modelo/administracion/InstalacionXGrupo.java"
+			],
+			[
+				"presetxinstalacion",
+				"EntidadesEducacion/src/main/java/modelo/administracion/PresetXInstalacion.java"
+			],
+			[
+				"persistence",
+				"EntidadesEducacion/src/main/resources/META-INF/persistence.xml"
+			],
+			[
+				"ejb",
+				"cargos/CargoEJBModule/ejbModule/META-INF/ejb-jar.xml"
+			],
+			[
+				"jsonmap",
+				"remoteutils/src/main/java/org/educacion/remoteutils/JsonMapper.java"
+			],
+			[
+				"personacargodto",
+				"EntidadesEducacion/src/main/java/modelo/reubicaciones/dto/PersonaCargoDTO.java"
+			],
+			[
+				"reportejb",
+				"cargos/CargoEJBModule/ejbModule/org/educacion/cargos/report/ReportEjb.java"
+			],
+			[
+				"persisten",
+				"EntidadesEducacion/target/classes/META-INF/persistence.xml"
+			],
+			[
+				"persitence",
+				"EntidadesEducacion/target/classes/META-INF/persistence.xml"
+			],
+			[
+				"hsasignadasdto",
+				"EntidadesEducacion/src/main/java/modelo/reubicaciones/dto/HsAsignadasDto.java"
+			],
+			[
+				"jsonm",
+				"remoteutils/src/main/java/org/educacion/remoteutils/JsonMapper.java"
+			],
+			[
+				"appfacade",
+				"cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/AppFacade.java"
+			],
+			[
+				"alumnosfacadeloca",
+				"Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/AlumnosFacadeLocal.java"
+			],
+			[
+				"alumnosejblo",
+				"Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/AlumnoSinPlazaEJBLocal.java"
+			],
+			[
+				"alumnosb",
+				"Sigae/Sigae-web/src/main/java/org/sigae/AlumnosBean.java"
+			],
+			[
+				"cargos.jsp",
+				"cargos/CargosWeb/src/main/webapp/cargos.jsp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/workspace_gf3/cargos.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 337.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
