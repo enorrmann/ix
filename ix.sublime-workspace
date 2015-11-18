@@ -8,43 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "src/main/java/ar/com/ix/shelters/web/ApplicationBean.java",
+			"file": "init/pages/informe.xhtml",
 			"settings":
 			{
-				"buffer_size": 18357,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "init/java/web/ApplicationBean.java",
-			"settings":
-			{
-				"buffer_size": 18357,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "init/pages/shelter.xhtml",
-			"settings":
-			{
-				"buffer_size": 6914,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "{\"a\":{\"remoteUser\":\"prufull\",\"params\":{\"arg0\":\"2\"},\"paramTypes\":{\"arg0\":\"java.lang.Long\"}}}",
-			"settings":
-			{
-				"buffer_size": 91,
-				"line_ending": "Unix",
-				"name": "{\"a\":{\"remoteUser\":\"prufull\",\"params\":{\"arg0\":\"2\"}"
-			}
-		},
-		{
-			"file": "init/backup.roo",
-			"settings":
-			{
-				"buffer_size": 3918,
+				"buffer_size": 6911,
 				"line_ending": "Unix"
 			}
 		}
@@ -122,27 +89,48 @@
 	"expanded_folders":
 	[
 		"/home/enorrmann/git/ix",
-		"/home/enorrmann/git/ix/init",
-		"/home/enorrmann/git/ix/init/java",
-		"/home/enorrmann/git/ix/init/java/web",
-		"/home/enorrmann/git/ix/init/pages"
+		"/home/enorrmann/git/ix/init"
 	],
 	"file_history":
 	[
-		"/home/enorrmann/.cache/.fr-xDwlic/WEB-INF/web.xml",
 		"/home/enorrmann/git/ix/init/messages_es.properties",
-		"/home/enorrmann/git/ix/target/classes/ar/com/ix/shelters/web/i18n/messages_en.properties",
-		"/home/enorrmann/git/ix/init/java/web/ApplicationBean.java",
-		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ApplicationBean.java",
-		"/home/enorrmann/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/enorrmann/git/ix/src/main/webapp/pages/shelter_view.xhtml",
-		"/home/enorrmann/git/ix/init/build.sh",
 		"/home/enorrmann/git/ix/init/backup.roo",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ApplicationBean_Roo_ApplicationBean.aj",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ApplicationBean.java",
+		"/home/enorrmann/git/ix/src/main/resources/ar/com/ix/shelters/web/i18n/messages_es.properties",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/informe.xhtml",
+		"/home/enorrmann/git/ix/src/main/webapp/WEB-INF/web.xml",
+		"/home/enorrmann/alter_dev/pdfjs-dist-master/README.md",
+		"/home/enorrmann/alter_dev/pdfjs-dist-master/build/pdf.js",
+		"/home/enorrmann/git/ix/init/java/web/ApplicationBean.java",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBean.aj",
+		"/home/enorrmann/git/ix/init/pages/informe.xhtml",
+		"/home/enorrmann/alter_dev/pdfjs-dist-master/web/pdf_viewer.js",
+		"/home/enorrmann/git/ix/init/java/model/Shelter.java",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/shelter_view.xhtml",
+		"/home/enorrmann/git/ix/init/pages/shelter_view.xhtml",
+		"/home/enorrmann/git/sgpbackend/src/main/java/ar/com/mdevsol/sgponline/web/MarcaBean_Roo_ManagedBean.aj",
+		"/home/enorrmann/git/ix/src/main/webapp/templates/layout.xhtml",
+		"/home/enorrmann/alter_dev/JS_Blanco/addInput.js",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Informe.java",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Tecnico.java",
+		"/home/enorrmann/git/sgpbackend/src/main/webapp/pages/provision.xhtml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/tarea.xhtml",
+		"/home/enorrmann/git/ix/init/pages/shelter.xhtml",
+		"/home/enorrmann/git/ix/shelters.script",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/InformeBean.java",
+		"/home/enorrmann/.cache/.fr-mkIwzz/v1/src/main/java/ar/com/ix/shelters/web/ApplicationBean_Roo_ApplicationBean.aj",
+		"/home/enorrmann/git/ix/init/pages/componente.xhtml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/componente.xhtml",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Componente.java",
+		"/home/enorrmann/.cache/.fr-xDwlic/WEB-INF/web.xml",
+		"/home/enorrmann/git/ix/target/classes/ar/com/ix/shelters/web/i18n/messages_en.properties",
+		"/home/enorrmann/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/enorrmann/git/ix/init/build.sh",
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ShelterViewBean.java",
 		"/home/enorrmann/git/ix/init/java/web/ShelterViewBean.java",
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Shelter.java",
 		"/home/enorrmann/git/ix/src/main/webapp/pages/shelter.xhtml",
-		"/home/enorrmann/git/ix/init/pages/componente.xhtml",
 		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/target/cargos-logica-rmi-0.0.1-SNAPSHOT/WEB-INF/web.xml",
 		"/home/enorrmann/workspace_gf3/cargos/CargoEJBModule/ejbModule/META-INF/ejb-jar.xml",
 		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/EjbInjector.java",
@@ -151,8 +139,6 @@
 		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/RmiFacadeRest.java",
 		"/home/enorrmann/workspace_gf3/SigaeRemoteRealm/src/ar/gov/santafe/realms/SigaeRemoteRealm.java",
 		"/home/enorrmann/workspace_gf3/SigaeRemoteRealm/src/ar/gov/santafe/realms/LoginModule.java",
-		"/home/enorrmann/git/ix/init/pages/shelter.xhtml",
-		"/home/enorrmann/git/ix/src/main/webapp/pages/componente.xhtml",
 		"/home/enorrmann/git/ix/init/pages/xcomponente.xhtml",
 		"/home/enorrmann/workspace_gf3/mci_cargos.sh",
 		"/home/enorrmann/workspace_gf3/cargos/pom.xml",
@@ -234,29 +220,7 @@
 		"/home/enorrmann/.cache/.fr-XLrDqH/META-INF/ejb-jar.xml",
 		"/home/enorrmann/.cache/.fr-zuCC49/META-INF/ejb-jar.xml",
 		"/home/enorrmann/.cache/.fr-Qyhw93/META-INF/ejb-jar.xml",
-		"/home/enorrmann/.cache/.fr-3XzaK9/META-INF/ejb-jar.xml",
-		"/home/enorrmann/.config/sublime-text-3/Packages/User/bash.sublime-build",
-		"/home/enorrmann/workspace_gf3/mci.sh",
-		"/home/enorrmann/desarrollo/Mavha.Web/Scripts/www/index.html",
-		"/home/enorrmann/.cache/.fr-DRTWZ6/WEB-INF/classes/META-INF/spring/applicationContext.xml",
-		"/home/enorrmann/desarrollo/Mavha.Web/Index.html",
-		"/home/enorrmann/.cache/.fr-l6guSW/WEB-INF/web.xml",
-		"/home/enorrmann/.cache/.fr-RYGRz3/WEB-INF/web.xml",
-		"/home/enorrmann/.cache/.fr-aEhYZ8/WEB-INF/faces-config.xml",
-		"/home/enorrmann/.cache/.fr-xmu3oX/META-INF/ejb-jar.xml",
-		"/home/enorrmann/.cache/.fr-9IPXVB/META-INF/ejb-jar.xml",
-		"/home/enorrmann/.cache/.fr-YngCMH/META-INF/ejb-jar.xml",
-		"/home/enorrmann/desarrollo/shelter2web/src/main/webapp/pages/shelter.xhtml",
-		"/home/enorrmann/desarrollo/shelter2web/src/main/webapp/pages/envio.xhtml",
-		"/home/enorrmann/Dropbox/PROYECTOS/lubricentro coqui/LubricentroJsf/src/main/webapp/pages/detalleCompra.xhtml",
-		"/home/enorrmann/desarrollo/shelter2web/src/main/resources/META-INF/persistence.xml",
-		"/home/enorrmann/.cache/.fr-XGKWFH/META-INF/ejb-jar.xml",
-		"/home/enorrmann/Dropbox/PROYECTOS/shelter2web/messages_es.properties",
-		"/home/enorrmann/desarrollo/shelter2web/build.sh",
-		"/home/enorrmann/desarrollo/shelter2web/src/main/resources/ar/com/norrmann/shelter2web/web/i18n/messages_es.properties",
-		"/home/enorrmann/Dropbox/PROYECTOS/shelter2web/src/main/resources/META-INF/persistence.xml",
-		"/home/enorrmann/Dropbox/PROYECTOS/shelter2web/src/main/resources/META-INF/spring/applicationContext.xml",
-		"/home/enorrmann/Dropbox/PROYECTOS/shelter2web/src/main/resources/ar/com/norrmann/shelter2web/web/i18n/messages_es.properties"
+		"/home/enorrmann/.cache/.fr-3XzaK9/META-INF/ejb-jar.xml"
 	],
 	"find":
 	{
@@ -279,6 +243,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"informe.informe",
+			"informeBean.informe",
+			"shelter",
+			"growlForm",
+			"viewForm",
+			"tecnic",
+			"map",
 			" ",
 			"ubica",
 			"shelter",
@@ -381,84 +352,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/main/java/ar/com/ix/shelters/web/ApplicationBean.java",
+					"file": "init/pages/informe.xhtml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18357,
+						"buffer_size": 6911,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18357,
-								18357
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5008.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "init/java/web/ApplicationBean.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 18357,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								18357,
-								18357
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5170.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "init/pages/shelter.xhtml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6914,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1903,
-								1903
+								6911,
+								6911
 							]
 						],
 						"settings":
@@ -468,66 +379,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 405.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 91,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								91,
-								91
-							]
-						],
-						"settings":
-						{
-							"auto_name": "{\"a\":{\"remoteUser\":\"prufull\",\"params\":{\"arg0\":\"2\"}",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 204.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "init/backup.roo",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3918,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2071,
-								2071
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 500.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -586,6 +441,42 @@
 		"selected_items":
 		[
 			[
+				"informe",
+				"src/main/webapp/pages/informe.xhtml"
+			],
+			[
+				"web",
+				"src/main/webapp/WEB-INF/web.xml"
+			],
+			[
+				"shelter_",
+				"init/pages/shelter_view.xhtml"
+			],
+			[
+				"shelter",
+				"init/pages/shelter_view.xhtml"
+			],
+			[
+				"tecni",
+				"src/main/java/ar/com/ix/shelters/model/Tecnico.java"
+			],
+			[
+				"tec",
+				"src/main/java/ar/com/ix/shelters/model/Tecnico.java"
+			],
+			[
+				"tarea",
+				"src/main/webapp/pages/tarea.xhtml"
+			],
+			[
+				"componente",
+				"src/main/webapp/pages/componente.xhtml"
+			],
+			[
+				"comp",
+				"src/main/java/ar/com/ix/shelters/model/Componente.java"
+			],
+			[
 				"messa",
 				"target/classes/ar/com/ix/shelters/web/i18n/messages_en.properties"
 			],
@@ -606,10 +497,6 @@
 				"init/pages/componente.xhtml"
 			],
 			[
-				"shelter",
-				"src/main/webapp/pages/shelter.xhtml"
-			],
-			[
 				"sheltervi",
 				"src/main/java/ar/com/ix/shelters/web/ShelterViewBean.java"
 			],
@@ -624,10 +511,6 @@
 			[
 				"ejbinjector",
 				"cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/EjbInjector.java"
-			],
-			[
-				"web",
-				"cargos-logica/cargos-logica-rmi/target/cargos-logica-rmi-0.0.1-SNAPSHOT/WEB-INF/web.xml"
 			],
 			[
 				"rmi",

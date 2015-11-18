@@ -88,6 +88,16 @@ field date --fieldName fechaInicio --type java.util.Date --dateFormat MEDIUM --t
 field string --fieldName horaInicio
 field date --fieldName fechaFin --type java.util.Date --dateFormat MEDIUM --timeFormat NONE --persistenceType JPA_DATE
 field string --fieldName horaFin
+// TIPO INFORME (anuales, semestrales, mantenimiento preventivo)
+entity jpa --class ~.model.TipoInforme
+field string --fieldName tipoInforme
+// INFORME
+entity jpa --class ~.model.Informe
+field reference --fieldName tipoInforme --type ~.model.TipoInforme
+field string --fieldName periodo
+field reference --fieldName responsable --type ~.model.Tecnico
+field string --fieldName linkAlInforme
+//field string --fieldName informe --lob true
 // CONFIGURACION DE LA WEB
 web jsf setup --library PRIMEFACES --implementation ORACLE_MOJARRA --theme BLACK_TIE
 web jsf all --package ~.web

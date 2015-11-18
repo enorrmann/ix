@@ -54,10 +54,15 @@ public class Shelter {
      */
     private String coordenadas;
 
-        public List<Componente> getComponentes() {
+    public List<Componente> getComponentes() {
         return entityManager().createQuery("SELECT c FROM Componente c where c.shelter = :shelter", Componente.class)
-        .setParameter("shelter",this)
-        .getResultList();
+            .setParameter("shelter",this)
+            .getResultList();
+    }
+    public List<Informe> getInformes() {
+        return entityManager().createQuery("SELECT i FROM Informe i where i.shelter = :shelter", Informe.class)
+            .setParameter("shelter",this)
+            .getResultList();
     }
 
 }
