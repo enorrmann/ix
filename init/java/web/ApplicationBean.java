@@ -93,7 +93,7 @@ private MenuModel menuModel;
 
         submenu = new Submenu();
         submenu.setId("informeSubmenu");
-        submenu.setLabel("Informe");
+        submenu.setLabel("Informes tecnicos y de red");
         item = new MenuItem();
         item.setId("createInformeMenuItem");
         item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_create}", String.class));
