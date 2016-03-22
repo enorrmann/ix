@@ -14,7 +14,7 @@ privileged aspect Tecnico_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Tecnico.entityManager;
     
-    public static final List<String> Tecnico.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nombre", "domicilio", "celular", "localidad", "zona");
+    public static final List<String> Tecnico.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nombre", "domicilio", "celular", "telefonoAlternativo", "grupoSanguineo", "localidad");
     
     public static final EntityManager Tecnico.entityManager() {
         EntityManager em = new Tecnico().entityManager;

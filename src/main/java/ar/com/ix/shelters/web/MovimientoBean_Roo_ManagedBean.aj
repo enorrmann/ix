@@ -231,7 +231,7 @@ privileged aspect MovimientoBean_Roo_ManagedBean {
         destinatarioCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{movimientoBean.completeDestinatario}", List.class, new Class[] { String.class }));
         destinatarioCreateInput.setDropdown(true);
         destinatarioCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "destinatario", String.class));
-        destinatarioCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{destinatario.nombre} #{destinatario.domicilio} #{destinatario.celular}", String.class));
+        destinatarioCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{destinatario.nombre} #{destinatario.domicilio} #{destinatario.celular} #{destinatario.telefonoAlternativo}", String.class));
         destinatarioCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{destinatario}", Tecnico.class));
         destinatarioCreateInput.setConverter(new TecnicoConverter());
         destinatarioCreateInput.setRequired(false);
@@ -353,7 +353,7 @@ privileged aspect MovimientoBean_Roo_ManagedBean {
         destinatarioEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{movimientoBean.completeDestinatario}", List.class, new Class[] { String.class }));
         destinatarioEditInput.setDropdown(true);
         destinatarioEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "destinatario", String.class));
-        destinatarioEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{destinatario.nombre} #{destinatario.domicilio} #{destinatario.celular}", String.class));
+        destinatarioEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{destinatario.nombre} #{destinatario.domicilio} #{destinatario.celular} #{destinatario.telefonoAlternativo}", String.class));
         destinatarioEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{destinatario}", Tecnico.class));
         destinatarioEditInput.setConverter(new TecnicoConverter());
         destinatarioEditInput.setRequired(false);
@@ -467,7 +467,7 @@ privileged aspect MovimientoBean_Roo_ManagedBean {
     public List<Tecnico> MovimientoBean.completeDestinatario(String query) {
         List<Tecnico> suggestions = new ArrayList<Tecnico>();
         for (Tecnico tecnico : Tecnico.findAllTecnicoes()) {
-            String tecnicoStr = String.valueOf(tecnico.getNombre() +  " "  + tecnico.getDomicilio() +  " "  + tecnico.getCelular());
+            String tecnicoStr = String.valueOf(tecnico.getNombre() +  " "  + tecnico.getDomicilio() +  " "  + tecnico.getCelular() +  " "  + tecnico.getTelefonoAlternativo());
             if (tecnicoStr.toLowerCase().startsWith(query.toLowerCase())) {
                 suggestions.add(tecnico);
             }

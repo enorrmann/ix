@@ -4,16 +4,8 @@
 package ar.com.ix.shelters.web;
 
 import ar.com.ix.shelters.web.ApplicationBean;
-import javax.annotation.PostConstruct;
-import javax.el.ELContext;
-import javax.el.ExpressionFactory;
-import javax.faces.application.Application;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import javax.faces.context.FacesContext;
-import org.primefaces.component.menuitem.MenuItem;
-import org.primefaces.component.submenu.Submenu;
-import org.primefaces.model.DefaultMenuModel;
 import org.primefaces.model.MenuModel;
 
 privileged aspect ApplicationBean_Roo_ApplicationBean {
@@ -21,7 +13,6 @@ privileged aspect ApplicationBean_Roo_ApplicationBean {
     declare @type: ApplicationBean: @ManagedBean;
     
     declare @type: ApplicationBean: @RequestScoped;
-    
     
     public MenuModel ApplicationBean.getMenuModel() {
         return menuModel;

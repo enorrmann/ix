@@ -5,10 +5,8 @@ package ar.com.ix.shelters.web;
 
 import ar.com.ix.shelters.model.Localidad;
 import ar.com.ix.shelters.model.Tecnico;
-import ar.com.ix.shelters.model.Zona;
 import ar.com.ix.shelters.web.TecnicoBean;
 import ar.com.ix.shelters.web.converter.LocalidadConverter;
-import ar.com.ix.shelters.web.converter.ZonaConverter;
 import ar.com.ix.shelters.web.util.MessageFactory;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +56,8 @@ privileged aspect TecnicoBean_Roo_ManagedBean {
         columns.add("nombre");
         columns.add("domicilio");
         columns.add("celular");
+        columns.add("telefonoAlternativo");
+        columns.add("grupoSanguineo");
     }
     
     public String TecnicoBean.getName() {
@@ -182,6 +182,42 @@ privileged aspect TecnicoBean_Roo_ManagedBean {
         celularCreateInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(celularCreateInputMessage);
         
+        OutputLabel telefonoAlternativoCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        telefonoAlternativoCreateOutput.setFor("telefonoAlternativoCreateInput");
+        telefonoAlternativoCreateOutput.setId("telefonoAlternativoCreateOutput");
+        telefonoAlternativoCreateOutput.setValue("Telefono Alternativo:");
+        htmlPanelGrid.getChildren().add(telefonoAlternativoCreateOutput);
+        
+        InputText telefonoAlternativoCreateInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
+        telefonoAlternativoCreateInput.setId("telefonoAlternativoCreateInput");
+        telefonoAlternativoCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{tecnicoBean.tecnico.telefonoAlternativo}", String.class));
+        telefonoAlternativoCreateInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(telefonoAlternativoCreateInput);
+        
+        Message telefonoAlternativoCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        telefonoAlternativoCreateInputMessage.setId("telefonoAlternativoCreateInputMessage");
+        telefonoAlternativoCreateInputMessage.setFor("telefonoAlternativoCreateInput");
+        telefonoAlternativoCreateInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(telefonoAlternativoCreateInputMessage);
+        
+        OutputLabel grupoSanguineoCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        grupoSanguineoCreateOutput.setFor("grupoSanguineoCreateInput");
+        grupoSanguineoCreateOutput.setId("grupoSanguineoCreateOutput");
+        grupoSanguineoCreateOutput.setValue("Grupo Sanguineo:");
+        htmlPanelGrid.getChildren().add(grupoSanguineoCreateOutput);
+        
+        InputText grupoSanguineoCreateInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
+        grupoSanguineoCreateInput.setId("grupoSanguineoCreateInput");
+        grupoSanguineoCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{tecnicoBean.tecnico.grupoSanguineo}", String.class));
+        grupoSanguineoCreateInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(grupoSanguineoCreateInput);
+        
+        Message grupoSanguineoCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        grupoSanguineoCreateInputMessage.setId("grupoSanguineoCreateInputMessage");
+        grupoSanguineoCreateInputMessage.setFor("grupoSanguineoCreateInput");
+        grupoSanguineoCreateInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(grupoSanguineoCreateInputMessage);
+        
         OutputLabel localidadCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         localidadCreateOutput.setFor("localidadCreateInput");
         localidadCreateOutput.setId("localidadCreateOutput");
@@ -205,30 +241,6 @@ privileged aspect TecnicoBean_Roo_ManagedBean {
         localidadCreateInputMessage.setFor("localidadCreateInput");
         localidadCreateInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(localidadCreateInputMessage);
-        
-        OutputLabel zonaCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
-        zonaCreateOutput.setFor("zonaCreateInput");
-        zonaCreateOutput.setId("zonaCreateOutput");
-        zonaCreateOutput.setValue("Zona:");
-        htmlPanelGrid.getChildren().add(zonaCreateOutput);
-        
-        AutoComplete zonaCreateInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
-        zonaCreateInput.setId("zonaCreateInput");
-        zonaCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{tecnicoBean.tecnico.zona}", Zona.class));
-        zonaCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{tecnicoBean.completeZona}", List.class, new Class[] { String.class }));
-        zonaCreateInput.setDropdown(true);
-        zonaCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "zona", String.class));
-        zonaCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{zona.nombre} #{zona.descripcion}", String.class));
-        zonaCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{zona}", Zona.class));
-        zonaCreateInput.setConverter(new ZonaConverter());
-        zonaCreateInput.setRequired(false);
-        htmlPanelGrid.getChildren().add(zonaCreateInput);
-        
-        Message zonaCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
-        zonaCreateInputMessage.setId("zonaCreateInputMessage");
-        zonaCreateInputMessage.setFor("zonaCreateInput");
-        zonaCreateInputMessage.setDisplay("icon");
-        htmlPanelGrid.getChildren().add(zonaCreateInputMessage);
         
         return htmlPanelGrid;
     }
@@ -295,6 +307,42 @@ privileged aspect TecnicoBean_Roo_ManagedBean {
         celularEditInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(celularEditInputMessage);
         
+        OutputLabel telefonoAlternativoEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        telefonoAlternativoEditOutput.setFor("telefonoAlternativoEditInput");
+        telefonoAlternativoEditOutput.setId("telefonoAlternativoEditOutput");
+        telefonoAlternativoEditOutput.setValue("Telefono Alternativo:");
+        htmlPanelGrid.getChildren().add(telefonoAlternativoEditOutput);
+        
+        InputText telefonoAlternativoEditInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
+        telefonoAlternativoEditInput.setId("telefonoAlternativoEditInput");
+        telefonoAlternativoEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{tecnicoBean.tecnico.telefonoAlternativo}", String.class));
+        telefonoAlternativoEditInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(telefonoAlternativoEditInput);
+        
+        Message telefonoAlternativoEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        telefonoAlternativoEditInputMessage.setId("telefonoAlternativoEditInputMessage");
+        telefonoAlternativoEditInputMessage.setFor("telefonoAlternativoEditInput");
+        telefonoAlternativoEditInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(telefonoAlternativoEditInputMessage);
+        
+        OutputLabel grupoSanguineoEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
+        grupoSanguineoEditOutput.setFor("grupoSanguineoEditInput");
+        grupoSanguineoEditOutput.setId("grupoSanguineoEditOutput");
+        grupoSanguineoEditOutput.setValue("Grupo Sanguineo:");
+        htmlPanelGrid.getChildren().add(grupoSanguineoEditOutput);
+        
+        InputText grupoSanguineoEditInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
+        grupoSanguineoEditInput.setId("grupoSanguineoEditInput");
+        grupoSanguineoEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{tecnicoBean.tecnico.grupoSanguineo}", String.class));
+        grupoSanguineoEditInput.setRequired(false);
+        htmlPanelGrid.getChildren().add(grupoSanguineoEditInput);
+        
+        Message grupoSanguineoEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
+        grupoSanguineoEditInputMessage.setId("grupoSanguineoEditInputMessage");
+        grupoSanguineoEditInputMessage.setFor("grupoSanguineoEditInput");
+        grupoSanguineoEditInputMessage.setDisplay("icon");
+        htmlPanelGrid.getChildren().add(grupoSanguineoEditInputMessage);
+        
         OutputLabel localidadEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
         localidadEditOutput.setFor("localidadEditInput");
         localidadEditOutput.setId("localidadEditOutput");
@@ -318,30 +366,6 @@ privileged aspect TecnicoBean_Roo_ManagedBean {
         localidadEditInputMessage.setFor("localidadEditInput");
         localidadEditInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(localidadEditInputMessage);
-        
-        OutputLabel zonaEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
-        zonaEditOutput.setFor("zonaEditInput");
-        zonaEditOutput.setId("zonaEditOutput");
-        zonaEditOutput.setValue("Zona:");
-        htmlPanelGrid.getChildren().add(zonaEditOutput);
-        
-        AutoComplete zonaEditInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
-        zonaEditInput.setId("zonaEditInput");
-        zonaEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{tecnicoBean.tecnico.zona}", Zona.class));
-        zonaEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{tecnicoBean.completeZona}", List.class, new Class[] { String.class }));
-        zonaEditInput.setDropdown(true);
-        zonaEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "zona", String.class));
-        zonaEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{zona.nombre} #{zona.descripcion}", String.class));
-        zonaEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{zona}", Zona.class));
-        zonaEditInput.setConverter(new ZonaConverter());
-        zonaEditInput.setRequired(false);
-        htmlPanelGrid.getChildren().add(zonaEditInput);
-        
-        Message zonaEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
-        zonaEditInputMessage.setId("zonaEditInputMessage");
-        zonaEditInputMessage.setFor("zonaEditInput");
-        zonaEditInputMessage.setDisplay("icon");
-        htmlPanelGrid.getChildren().add(zonaEditInputMessage);
         
         return htmlPanelGrid;
     }
@@ -384,6 +408,26 @@ privileged aspect TecnicoBean_Roo_ManagedBean {
         celularValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{tecnicoBean.tecnico.celular}", String.class));
         htmlPanelGrid.getChildren().add(celularValue);
         
+        HtmlOutputText telefonoAlternativoLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        telefonoAlternativoLabel.setId("telefonoAlternativoLabel");
+        telefonoAlternativoLabel.setValue("Telefono Alternativo:");
+        htmlPanelGrid.getChildren().add(telefonoAlternativoLabel);
+        
+        HtmlOutputText telefonoAlternativoValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        telefonoAlternativoValue.setId("telefonoAlternativoValue");
+        telefonoAlternativoValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{tecnicoBean.tecnico.telefonoAlternativo}", String.class));
+        htmlPanelGrid.getChildren().add(telefonoAlternativoValue);
+        
+        HtmlOutputText grupoSanguineoLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        grupoSanguineoLabel.setId("grupoSanguineoLabel");
+        grupoSanguineoLabel.setValue("Grupo Sanguineo:");
+        htmlPanelGrid.getChildren().add(grupoSanguineoLabel);
+        
+        HtmlOutputText grupoSanguineoValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
+        grupoSanguineoValue.setId("grupoSanguineoValue");
+        grupoSanguineoValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{tecnicoBean.tecnico.grupoSanguineo}", String.class));
+        htmlPanelGrid.getChildren().add(grupoSanguineoValue);
+        
         HtmlOutputText localidadLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
         localidadLabel.setId("localidadLabel");
         localidadLabel.setValue("Localidad:");
@@ -393,16 +437,6 @@ privileged aspect TecnicoBean_Roo_ManagedBean {
         localidadValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{tecnicoBean.tecnico.localidad}", Localidad.class));
         localidadValue.setConverter(new LocalidadConverter());
         htmlPanelGrid.getChildren().add(localidadValue);
-        
-        HtmlOutputText zonaLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
-        zonaLabel.setId("zonaLabel");
-        zonaLabel.setValue("Zona:");
-        htmlPanelGrid.getChildren().add(zonaLabel);
-        
-        HtmlOutputText zonaValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
-        zonaValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{tecnicoBean.tecnico.zona}", Zona.class));
-        zonaValue.setConverter(new ZonaConverter());
-        htmlPanelGrid.getChildren().add(zonaValue);
         
         return htmlPanelGrid;
     }
@@ -424,17 +458,6 @@ privileged aspect TecnicoBean_Roo_ManagedBean {
             String localidadStr = String.valueOf(localidad.getNombre());
             if (localidadStr.toLowerCase().startsWith(query.toLowerCase())) {
                 suggestions.add(localidad);
-            }
-        }
-        return suggestions;
-    }
-    
-    public List<Zona> TecnicoBean.completeZona(String query) {
-        List<Zona> suggestions = new ArrayList<Zona>();
-        for (Zona zona : Zona.findAllZonas()) {
-            String zonaStr = String.valueOf(zona.getNombre() +  " "  + zona.getDescripcion());
-            if (zonaStr.toLowerCase().startsWith(query.toLowerCase())) {
-                suggestions.add(zona);
             }
         }
         return suggestions;

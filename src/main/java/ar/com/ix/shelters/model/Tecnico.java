@@ -23,11 +23,14 @@ public class Tecnico {
 
     /**
      */
-    @ManyToOne
-    private Localidad localidad;
+    private String telefonoAlternativo;
+
+    /**
+     */
+    private String grupoSanguineo;
 
     /**
      */
     @ManyToOne
-    private Zona zona;
+    private Localidad localidad;
 }

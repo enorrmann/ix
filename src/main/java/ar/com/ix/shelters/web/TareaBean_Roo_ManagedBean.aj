@@ -165,7 +165,7 @@ privileged aspect TareaBean_Roo_ManagedBean {
         responsableCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{tareaBean.completeResponsable}", List.class, new Class[] { String.class }));
         responsableCreateInput.setDropdown(true);
         responsableCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "responsable", String.class));
-        responsableCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{responsable.nombre} #{responsable.domicilio} #{responsable.celular}", String.class));
+        responsableCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{responsable.nombre} #{responsable.domicilio} #{responsable.celular} #{responsable.telefonoAlternativo}", String.class));
         responsableCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{responsable}", Tecnico.class));
         responsableCreateInput.setConverter(new TecnicoConverter());
         responsableCreateInput.setRequired(false);
@@ -344,7 +344,7 @@ privileged aspect TareaBean_Roo_ManagedBean {
         responsableEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{tareaBean.completeResponsable}", List.class, new Class[] { String.class }));
         responsableEditInput.setDropdown(true);
         responsableEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "responsable", String.class));
-        responsableEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{responsable.nombre} #{responsable.domicilio} #{responsable.celular}", String.class));
+        responsableEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{responsable.nombre} #{responsable.domicilio} #{responsable.celular} #{responsable.telefonoAlternativo}", String.class));
         responsableEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{responsable}", Tecnico.class));
         responsableEditInput.setConverter(new TecnicoConverter());
         responsableEditInput.setRequired(false);
@@ -594,7 +594,7 @@ privileged aspect TareaBean_Roo_ManagedBean {
     public List<Tecnico> TareaBean.completeResponsable(String query) {
         List<Tecnico> suggestions = new ArrayList<Tecnico>();
         for (Tecnico tecnico : Tecnico.findAllTecnicoes()) {
-            String tecnicoStr = String.valueOf(tecnico.getNombre() +  " "  + tecnico.getDomicilio() +  " "  + tecnico.getCelular());
+            String tecnicoStr = String.valueOf(tecnico.getNombre() +  " "  + tecnico.getDomicilio() +  " "  + tecnico.getCelular() +  " "  + tecnico.getTelefonoAlternativo());
             if (tecnicoStr.toLowerCase().startsWith(query.toLowerCase())) {
                 suggestions.add(tecnico);
             }

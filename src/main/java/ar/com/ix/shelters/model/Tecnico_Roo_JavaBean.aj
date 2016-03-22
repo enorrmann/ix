@@ -5,7 +5,6 @@ package ar.com.ix.shelters.model;
 
 import ar.com.ix.shelters.model.Localidad;
 import ar.com.ix.shelters.model.Tecnico;
-import ar.com.ix.shelters.model.Zona;
 
 privileged aspect Tecnico_Roo_JavaBean {
     
@@ -33,20 +32,28 @@ privileged aspect Tecnico_Roo_JavaBean {
         this.celular = celular;
     }
     
+    public String Tecnico.getTelefonoAlternativo() {
+        return this.telefonoAlternativo;
+    }
+    
+    public void Tecnico.setTelefonoAlternativo(String telefonoAlternativo) {
+        this.telefonoAlternativo = telefonoAlternativo;
+    }
+    
+    public String Tecnico.getGrupoSanguineo() {
+        return this.grupoSanguineo;
+    }
+    
+    public void Tecnico.setGrupoSanguineo(String grupoSanguineo) {
+        this.grupoSanguineo = grupoSanguineo;
+    }
+    
     public Localidad Tecnico.getLocalidad() {
         return this.localidad;
     }
     
     public void Tecnico.setLocalidad(Localidad localidad) {
         this.localidad = localidad;
-    }
-    
-    public Zona Tecnico.getZona() {
-        return this.zona;
-    }
-    
-    public void Tecnico.setZona(Zona zona) {
-        this.zona = zona;
     }
     
 }
