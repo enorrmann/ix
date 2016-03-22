@@ -23,8 +23,10 @@ entity jpa --class ~.model.Tecnico
 field string --fieldName nombre
 field string --fieldName domicilio
 field string --fieldName celular
+field string --fieldName telefonoAlternativo
+field string --fieldName grupoSanguineo
 field reference --fieldName localidad --type ~.model.Localidad
-field reference --fieldName zona --type ~.model.Zona
+//field reference --fieldName zona --type ~.model.Zona // no va mas zona
 // TIPO NODO (Atendido, No Atendido, Data Center y Otros)
 entity jpa --class ~.model.TipoNodo
 field string --fieldName nombre
@@ -98,6 +100,13 @@ field string --fieldName periodo
 field reference --fieldName responsable --type ~.model.Tecnico
 field string --fieldName linkAlInforme
 //field string --fieldName informe --lob true
+// CAPACITACION
+entity jpa --class ~.model.Capacitacion
+field string --fieldName titulo
+field string --fieldName autor
+field string --fieldName descripcion
+field date --fieldName fecha --type java.util.Date --dateFormat MEDIUM --timeFormat NONE --persistenceType JPA_DATE
+field string --fieldName linkALaCapacitacion
 // CONFIGURACION DE LA WEB
 web jsf setup --library PRIMEFACES --implementation ORACLE_MOJARRA --theme BLACK_TIE
 web jsf all --package ~.web
