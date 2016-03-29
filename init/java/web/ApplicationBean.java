@@ -112,6 +112,26 @@ private MenuModel menuModel;
         item.setAsync(false);
         item.setUpdate(":dataForm:data");
         submenu.getChildren().add(item);
+// tipo informe
+        item = new MenuItem();
+        item.setId("createTipoInformeMenuItem");
+        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_create} Tipo informe", String.class));
+        item.setActionExpression(expressionFactory.createMethodExpression(elContext, "#{tipoInformeBean.displayCreateDialog}", String.class, new Class[0]));
+        item.setIcon("ui-icon ui-icon-document");
+        item.setAjax(false);
+        item.setAsync(false);
+        item.setUpdate(":dataForm:data");
+        submenu.getChildren().add(item);
+        item = new MenuItem();
+        item.setId("listTipoInformeMenuItem");
+        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_list} Tipo informe", String.class));
+        item.setActionExpression(expressionFactory.createMethodExpression(elContext, "#{tipoInformeBean.displayList}", String.class, new Class[0]));
+        item.setIcon("ui-icon ui-icon-folder-open");
+        item.setAjax(false);
+        item.setAsync(false);
+        item.setUpdate(":dataForm:data");
+        submenu.getChildren().add(item);
+//fin tipo informe
         menuModel.addSubmenu(submenu);
 
         submenu = new Submenu();

@@ -14,10 +14,10 @@
     <h:form prependId="false" id="dataForm">
       <p:panel id="data" toggleable="true" toggleSpeed="250">
         <f:facet name="header">
-          <h:outputText value="#{capacitacionBean.name}" />
+          <h:outputText value="Capacitaciones" />
         </f:facet>
         <h:outputFormat id="noRecordsFound" value="#{messages.label_no_records_found}" rendered="#{!capacitacionBean.dataVisible}">
-          <f:param value="Capacitacions" />
+          <f:param value="Capacitaciones" />
         </h:outputFormat>
         <p:dataTable id="list" value="#{capacitacionBean.allCapacitacions}" var="capacitacion" rendered="#{capacitacionBean.dataVisible}" resizableColumns="false" paginator="true" paginatorTemplate=" {CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}" rowsPerPageTemplate="5,10,25,50" rows="10">
 
