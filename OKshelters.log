@@ -1,3 +1,0 @@
-/*C2*/SET SCHEMA PUBLIC
-INSERT INTO DOCUMENTO VALUES('pp',27,'https://www.dropbox.com/s/uqvs9o2o1oxfp4c/Informe%20anual%20final%20Argentina%202014.pdf?dl=1','2014',0,8,1)
-COMMIT
