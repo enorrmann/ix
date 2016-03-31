@@ -1,14 +1,13 @@
 package ar.com.ix.shelters.web;
 
+import ar.com.ix.shelters.model.TipoInforme;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import ar.com.ix.shelters.web.ApplicationBean;
 import javax.annotation.PostConstruct;
 import javax.el.ELContext;
 import javax.el.ExpressionFactory;
 import javax.faces.application.Application;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import org.primefaces.component.menuitem.MenuItem;
 import org.primefaces.component.submenu.Submenu;
@@ -48,23 +47,9 @@ private MenuModel menuModel;
         submenu = new Submenu();
         submenu.setId("shelterSubmenu");
         submenu.setLabel("Shelters");
-        item = new MenuItem();
-        item.setId("createShelterMenuItem");
-        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_create} Shelter", String.class));
-        item.setActionExpression(expressionFactory.createMethodExpression(elContext, "#{shelterBean.displayCreateDialog}", String.class, new Class[0]));
-        item.setIcon("ui-icon ui-icon-document");
-        item.setAjax(false);
-        item.setAsync(false);
-        item.setUpdate(":dataForm:data");
+        item = createMenuItem("createShelterMenuItem", "#{messages.label_create} Shelter", "#{shelterBean.displayCreateDialog}", "ui-icon ui-icon-document");
         submenu.getChildren().add(item);
-        item = new MenuItem();
-        item.setId("listShelterMenuItem");
-        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_list} Shelters", String.class));
-        item.setActionExpression(expressionFactory.createMethodExpression(elContext, "#{shelterBean.displayList}", String.class, new Class[0]));
-        item.setIcon("ui-icon ui-icon-folder-open");
-        item.setAjax(false);
-        item.setAsync(false);
-        item.setUpdate(":dataForm:data");
+        item = createMenuItem("listShelterMenuItem", "#{messages.label_list} Shelters", "#{shelterBean.displayList}", "ui-icon ui-icon-folder-open");
         submenu.getChildren().add(item);
         menuModel.addSubmenu(submenu);
 
@@ -103,7 +88,7 @@ private MenuModel menuModel;
         item.setAsync(false);
         item.setUpdate(":dataForm:data");
         submenu.getChildren().add(item);
-        item = new MenuItem();
+        /*item = new MenuItem();
         item.setId("listInformeMenuItem");
         item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_list}", String.class));
         item.setActionExpression(expressionFactory.createMethodExpression(elContext, "#{informeBean.displayList}", String.class, new Class[0]));
@@ -111,8 +96,13 @@ private MenuModel menuModel;
         item.setAjax(false);
         item.setAsync(false);
         item.setUpdate(":dataForm:data");
-        submenu.getChildren().add(item);
-// tipo informe
+        submenu.getChildren().add(item);*/
+        addTipoInformeItems(submenu);
+        menuModel.addSubmenu(submenu);
+        // tipo informe
+        submenu = new Submenu();
+        submenu.setId("tipoInformeSubmenu");
+        submenu.setLabel("Tipos de informe");
         item = new MenuItem();
         item.setId("createTipoInformeMenuItem");
         item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_create} Tipo informe", String.class));
@@ -410,5 +400,32 @@ private MenuModel menuModel;
         item.setUpdate(":dataForm:data");
         submenu.getChildren().add(item);
         menuModel.addSubmenu(submenu);
+    }
+
+    private MenuItem createMenuItem(String itemId, String valueExpression, String methodExpression, String icon){
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        Application application = facesContext.getApplication();
+        ExpressionFactory expressionFactory = application.getExpressionFactory();
+        ELContext elContext = facesContext.getELContext();
+
+        MenuItem item = new MenuItem();
+        item.setId(itemId);
+        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, valueExpression, String.class));
+        item.setActionExpression(expressionFactory.createMethodExpression(elContext, methodExpression, String.class, new Class[0]));
+        item.setIcon(icon);
+        item.setAjax(false);
+        item.setAsync(false);
+        item.setUpdate(":dataForm:data");
+        return item;
+    }
+    
+    private void addTipoInformeItems(Submenu submenu){
+        List<TipoInforme> tipoInformeList = TipoInforme.findAllTipoInformes();
+        MenuItem menuItem = null;
+        for (TipoInforme unTipoInforme : tipoInformeList){
+            menuItem = createMenuItem("listarInformeId"+unTipoInforme.getId(), unTipoInforme.getTipoInforme(), "#{informeBean.displayListById("+unTipoInforme.getId()+")}", "ui-icon ui-icon-folder-open");
+            submenu.getChildren().add(menuItem);
+            
+        }
     }
 }

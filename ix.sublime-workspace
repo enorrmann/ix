@@ -8,10 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "init/pages/informe.xhtml",
+			"file": "src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBeanCustom.aj",
 			"settings":
 			{
-				"buffer_size": 6911,
+				"buffer_size": 1367,
 				"line_ending": "Unix"
 			}
 		}
@@ -89,24 +89,41 @@
 	"expanded_folders":
 	[
 		"/home/enorrmann/git/ix",
-		"/home/enorrmann/git/ix/init"
+		"/home/enorrmann/git/ix/init",
+		"/home/enorrmann/git/ix/init/java",
+		"/home/enorrmann/git/ix/init/java/web"
 	],
 	"file_history":
 	[
-		"/home/enorrmann/git/ix/init/messages_es.properties",
-		"/home/enorrmann/git/ix/init/backup.roo",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Informe_Roo_Jpa_ActiveRecordCustom.aj",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBean.aj",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Informe_Roo_Jpa_ActiveRecord.aj",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBeanCustom.aj",
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ApplicationBean_Roo_ApplicationBean.aj",
+		"/home/enorrmann/git/ix/init/java/model/Shelter.java",
+		"/home/enorrmann/git/ix/src/main/resources/META-INF/spring/applicationContext.xml",
+		"/home/enorrmann/git/ix/src/main/webapp/WEB-INF/faces-config.xml",
+		"/home/enorrmann/git/ix/src/main/webapp/WEB-INF/web.xml",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Capacitacion.java",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/TipoInforme.java",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/TipoInforme_Roo_JavaBean.aj",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/TipoInforme_Roo_Jpa_ActiveRecord.aj",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/TipoInforme_Roo_Jpa_Entity.aj",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/capacitacion.xhtml",
+		"/home/enorrmann/git/ix/init/java/web/ApplicationBean.java",
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ApplicationBean.java",
+		"/home/enorrmann/git/ix/init/pages/informe.xhtml",
+		"/home/enorrmann/git/ix/init/pages/capacitacion.xhtml",
+		"/home/enorrmann/git/ix/log.roo",
+		"/home/enorrmann/git/ix/init/backup.roo",
+		"/home/enorrmann/git/ix/shelters.script",
+		"/home/enorrmann/UnityProjects/New Unity Project/Assets/scripts/CameraControl.cs",
+		"/home/enorrmann/git/ix/init/messages_es.properties",
 		"/home/enorrmann/git/ix/src/main/resources/ar/com/ix/shelters/web/i18n/messages_es.properties",
 		"/home/enorrmann/git/ix/src/main/webapp/pages/informe.xhtml",
-		"/home/enorrmann/git/ix/src/main/webapp/WEB-INF/web.xml",
 		"/home/enorrmann/alter_dev/pdfjs-dist-master/README.md",
 		"/home/enorrmann/alter_dev/pdfjs-dist-master/build/pdf.js",
-		"/home/enorrmann/git/ix/init/java/web/ApplicationBean.java",
-		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBean.aj",
-		"/home/enorrmann/git/ix/init/pages/informe.xhtml",
 		"/home/enorrmann/alter_dev/pdfjs-dist-master/web/pdf_viewer.js",
-		"/home/enorrmann/git/ix/init/java/model/Shelter.java",
 		"/home/enorrmann/git/ix/src/main/webapp/pages/shelter_view.xhtml",
 		"/home/enorrmann/git/ix/init/pages/shelter_view.xhtml",
 		"/home/enorrmann/git/sgpbackend/src/main/java/ar/com/mdevsol/sgponline/web/MarcaBean_Roo_ManagedBean.aj",
@@ -117,7 +134,6 @@
 		"/home/enorrmann/git/sgpbackend/src/main/webapp/pages/provision.xhtml",
 		"/home/enorrmann/git/ix/src/main/webapp/pages/tarea.xhtml",
 		"/home/enorrmann/git/ix/init/pages/shelter.xhtml",
-		"/home/enorrmann/git/ix/shelters.script",
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/InformeBean.java",
 		"/home/enorrmann/.cache/.fr-mkIwzz/v1/src/main/java/ar/com/ix/shelters/web/ApplicationBean_Roo_ApplicationBean.aj",
 		"/home/enorrmann/git/ix/init/pages/componente.xhtml",
@@ -206,21 +222,7 @@
 		"/home/enorrmann/Dropbox/PROYECTOS/shelter2web/pages/componente.xhtml",
 		"/home/enorrmann/desarrollo/shelter2web/src/main/webapp/pages/componente.xhtml",
 		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/Usuario.java",
-		"/home/enorrmann/Escritorio/error.titulos",
-		"/home/enorrmann/desarrollo/glassfish3/glassfish/domains/domain1/logs/server.log_2015-08-28T10-33-12",
-		"/home/enorrmann/desarrollo/glassfish3/glassfish/domains/domain1/logs/server.log_2015-07-30T09-12-09",
-		"/home/enorrmann/.cache/.fr-W1WTwD/META-INF/ejb-jar.xml",
-		"/home/enorrmann/.cache/.fr-geLo8Y/META-INF/application.xml",
-		"/home/enorrmann/.cache/.fr-gEf5UN/META-INF/application.xml",
-		"/home/enorrmann/.cache/.fr-sv5mG5/META-INF/persistence.xml",
-		"/home/enorrmann/.cache/.fr-gnjeKv/META-INF/persistence.xml",
-		"/home/enorrmann/.cache/.fr-R6NrP4/META-INF/persistence.xml",
-		"/home/enorrmann/.cache/.fr-vbdLPe/META-INF/ejb-jar.xml",
-		"/home/enorrmann/.cache/.fr-N89Xqw/META-INF/ejb-jar.xml",
-		"/home/enorrmann/.cache/.fr-XLrDqH/META-INF/ejb-jar.xml",
-		"/home/enorrmann/.cache/.fr-zuCC49/META-INF/ejb-jar.xml",
-		"/home/enorrmann/.cache/.fr-Qyhw93/META-INF/ejb-jar.xml",
-		"/home/enorrmann/.cache/.fr-3XzaK9/META-INF/ejb-jar.xml"
+		"/home/enorrmann/Escritorio/error.titulos"
 	],
 	"find":
 	{
@@ -243,6 +245,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"findAllInformes",
+			"informe",
+			"tipo",
+			"center",
+			"date",
 			"informe.informe",
 			"informeBean.informe",
 			"shelter",
@@ -357,29 +364,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "init/pages/informe.xhtml",
+					"file": "src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBeanCustom.aj",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6911,
+						"buffer_size": 1367,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6911,
-								6911
+								1212,
+								1212
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 204.0,
+						"translation.y": 306.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -440,6 +445,26 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"tipoinforme",
+				"src/main/java/ar/com/ix/shelters/model/TipoInforme_Roo_JavaBean.aj"
+			],
+			[
+				"tipoinformeacti",
+				"src/main/java/ar/com/ix/shelters/model/TipoInforme_Roo_Jpa_ActiveRecord.aj"
+			],
+			[
+				"tipoin",
+				"src/main/java/ar/com/ix/shelters/model/TipoInforme_Roo_Jpa_Entity.aj"
+			],
+			[
+				"capacit",
+				"src/main/java/ar/com/ix/shelters/model/Capacitacion.java"
+			],
+			[
+				"capacita",
+				"src/main/java/ar/com/ix/shelters/model/Capacitacion.java"
+			],
 			[
 				"informe",
 				"src/main/webapp/pages/informe.xhtml"
@@ -747,7 +772,7 @@
 		[
 			[
 				"",
-				"~/workspace_gf3/cargos.sublime-project"
+				"~/workspace_gf3/sigae.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -769,7 +794,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 337.0,
+	"side_bar_width": 319.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
