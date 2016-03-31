@@ -3,11 +3,11 @@
 
 package ar.com.ix.shelters.model;
 
-import ar.com.ix.shelters.model.Informe;
+import ar.com.ix.shelters.model.Relevamiento;
 import javax.persistence.Entity;
 
-privileged aspect Informe_Roo_Jpa_Entity {
+privileged aspect Relevamiento_Roo_Jpa_Entity {
     
-    declare @type: Informe: @Entity;
+    declare @type: Relevamiento: @Entity;
     
 }

@@ -90,16 +90,21 @@ field date --fieldName fechaInicio --type java.util.Date --dateFormat MEDIUM --t
 field string --fieldName horaInicio
 field date --fieldName fechaFin --type java.util.Date --dateFormat MEDIUM --timeFormat NONE --persistenceType JPA_DATE
 field string --fieldName horaFin
+// DOCUMENTO
+entity jpa --class ~.model.Documento --abstract
+field string --fieldName periodo
+field reference --fieldName responsable --type ~.model.Tecnico
+field string --fieldName link
 // TIPO INFORME (anuales, semestrales, mantenimiento preventivo)
 entity jpa --class ~.model.TipoInforme
 field string --fieldName tipoInforme
 // INFORME
-entity jpa --class ~.model.Informe
+entity jpa --class ~.model.Informe --extends ~.model.Documento
 field reference --fieldName tipoInforme --type ~.model.TipoInforme
-field string --fieldName periodo
-field reference --fieldName responsable --type ~.model.Tecnico
-field string --fieldName linkAlInforme
-//field string --fieldName informe --lob true
+// HISTORICOS IMPORTANTES
+entity jpa --class ~.model.HistoricoImportante --extends ~.model.Documento
+// RELEVAMIENTO Y CIRCUITO
+entity jpa --class ~.model.Relevamiento --extends ~.model.Documento
 // CAPACITACION
 entity jpa --class ~.model.Capacitacion
 field string --fieldName titulo

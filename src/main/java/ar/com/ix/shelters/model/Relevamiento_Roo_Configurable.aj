@@ -3,11 +3,11 @@
 
 package ar.com.ix.shelters.model;
 
-import ar.com.ix.shelters.model.Informe;
-import javax.persistence.Entity;
+import ar.com.ix.shelters.model.Relevamiento;
+import org.springframework.beans.factory.annotation.Configurable;
 
-privileged aspect Informe_Roo_Jpa_Entity {
+privileged aspect Relevamiento_Roo_Configurable {
     
-    declare @type: Informe: @Entity;
+    declare @type: Relevamiento: @Configurable;
     
 }

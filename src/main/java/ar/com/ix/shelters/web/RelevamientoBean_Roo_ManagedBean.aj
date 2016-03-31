@@ -3,12 +3,10 @@
 
 package ar.com.ix.shelters.web;
 
-import ar.com.ix.shelters.model.Informe;
+import ar.com.ix.shelters.model.Relevamiento;
 import ar.com.ix.shelters.model.Tecnico;
-import ar.com.ix.shelters.model.TipoInforme;
-import ar.com.ix.shelters.web.InformeBean;
+import ar.com.ix.shelters.web.RelevamientoBean;
 import ar.com.ix.shelters.web.converter.TecnicoConverter;
-import ar.com.ix.shelters.web.converter.TipoInformeConverter;
 import ar.com.ix.shelters.web.util.MessageFactory;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,98 +26,98 @@ import org.primefaces.component.outputlabel.OutputLabel;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.CloseEvent;
 
-privileged aspect InformeBean_Roo_ManagedBean {
+privileged aspect RelevamientoBean_Roo_ManagedBean {
     
-    declare @type: InformeBean: @ManagedBean(name = "informeBean");
+    declare @type: RelevamientoBean: @ManagedBean(name = "relevamientoBean");
     
-    declare @type: InformeBean: @SessionScoped;
+    declare @type: RelevamientoBean: @SessionScoped;
     
-    private String InformeBean.name = "Informes";
+    private String RelevamientoBean.name = "Relevamientoes";
     
-    private Informe InformeBean.informe;
+    private Relevamiento RelevamientoBean.relevamiento;
     
-    private List<Informe> InformeBean.allInformes;
+    private List<Relevamiento> RelevamientoBean.allRelevamientoes;
     
-    private boolean InformeBean.dataVisible = false;
+    private boolean RelevamientoBean.dataVisible = false;
     
-    private List<String> InformeBean.columns;
+    private List<String> RelevamientoBean.columns;
     
-    private HtmlPanelGrid InformeBean.createPanelGrid;
+    private HtmlPanelGrid RelevamientoBean.createPanelGrid;
     
-    private HtmlPanelGrid InformeBean.editPanelGrid;
+    private HtmlPanelGrid RelevamientoBean.editPanelGrid;
     
-    private HtmlPanelGrid InformeBean.viewPanelGrid;
+    private HtmlPanelGrid RelevamientoBean.viewPanelGrid;
     
-    private boolean InformeBean.createDialogVisible = false;
+    private boolean RelevamientoBean.createDialogVisible = false;
     
     @PostConstruct
-    public void InformeBean.init() {
+    public void RelevamientoBean.init() {
         columns = new ArrayList<String>();
         columns.add("periodo");
         columns.add("link");
     }
     
-    public String InformeBean.getName() {
+    public String RelevamientoBean.getName() {
         return name;
     }
     
-    public List<String> InformeBean.getColumns() {
+    public List<String> RelevamientoBean.getColumns() {
         return columns;
     }
     
-    public List<Informe> InformeBean.getAllInformes() {
-        return allInformes;
+    public List<Relevamiento> RelevamientoBean.getAllRelevamientoes() {
+        return allRelevamientoes;
     }
     
-    public void InformeBean.setAllInformes(List<Informe> allInformes) {
-        this.allInformes = allInformes;
+    public void RelevamientoBean.setAllRelevamientoes(List<Relevamiento> allRelevamientoes) {
+        this.allRelevamientoes = allRelevamientoes;
     }
     
-    public String InformeBean.findAllInformes() {
-        allInformes = Informe.findAllInformes();
-        dataVisible = !allInformes.isEmpty();
+    public String RelevamientoBean.findAllRelevamientoes() {
+        allRelevamientoes = Relevamiento.findAllRelevamientoes();
+        dataVisible = !allRelevamientoes.isEmpty();
         return null;
     }
     
-    public boolean InformeBean.isDataVisible() {
+    public boolean RelevamientoBean.isDataVisible() {
         return dataVisible;
     }
     
-    public void InformeBean.setDataVisible(boolean dataVisible) {
+    public void RelevamientoBean.setDataVisible(boolean dataVisible) {
         this.dataVisible = dataVisible;
     }
     
-    public HtmlPanelGrid InformeBean.getCreatePanelGrid() {
+    public HtmlPanelGrid RelevamientoBean.getCreatePanelGrid() {
         if (createPanelGrid == null) {
             createPanelGrid = populateCreatePanel();
         }
         return createPanelGrid;
     }
     
-    public void InformeBean.setCreatePanelGrid(HtmlPanelGrid createPanelGrid) {
+    public void RelevamientoBean.setCreatePanelGrid(HtmlPanelGrid createPanelGrid) {
         this.createPanelGrid = createPanelGrid;
     }
     
-    public HtmlPanelGrid InformeBean.getEditPanelGrid() {
+    public HtmlPanelGrid RelevamientoBean.getEditPanelGrid() {
         if (editPanelGrid == null) {
             editPanelGrid = populateEditPanel();
         }
         return editPanelGrid;
     }
     
-    public void InformeBean.setEditPanelGrid(HtmlPanelGrid editPanelGrid) {
+    public void RelevamientoBean.setEditPanelGrid(HtmlPanelGrid editPanelGrid) {
         this.editPanelGrid = editPanelGrid;
     }
     
-    public HtmlPanelGrid InformeBean.getViewPanelGrid() {
+    public HtmlPanelGrid RelevamientoBean.getViewPanelGrid() {
         return populateViewPanel();
     }
     
-    public void InformeBean.setViewPanelGrid(HtmlPanelGrid viewPanelGrid) {
+    public void RelevamientoBean.setViewPanelGrid(HtmlPanelGrid viewPanelGrid) {
         this.viewPanelGrid = viewPanelGrid;
     }
     
-    public HtmlPanelGrid InformeBean.populateCreatePanel() {
+    public HtmlPanelGrid RelevamientoBean.populateCreatePanel() {
         FacesContext facesContext = FacesContext.getCurrentInstance();
         javax.faces.application.Application application = facesContext.getApplication();
         ExpressionFactory expressionFactory = application.getExpressionFactory();
@@ -135,7 +133,7 @@ privileged aspect InformeBean_Roo_ManagedBean {
         
         InputText periodoCreateInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
         periodoCreateInput.setId("periodoCreateInput");
-        periodoCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.periodo}", String.class));
+        periodoCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{relevamientoBean.relevamiento.periodo}", String.class));
         periodoCreateInput.setRequired(false);
         htmlPanelGrid.getChildren().add(periodoCreateInput);
         
@@ -153,8 +151,8 @@ privileged aspect InformeBean_Roo_ManagedBean {
         
         AutoComplete responsableCreateInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
         responsableCreateInput.setId("responsableCreateInput");
-        responsableCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.responsable}", Tecnico.class));
-        responsableCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{informeBean.completeResponsable}", List.class, new Class[] { String.class }));
+        responsableCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{relevamientoBean.relevamiento.responsable}", Tecnico.class));
+        responsableCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{relevamientoBean.completeResponsable}", List.class, new Class[] { String.class }));
         responsableCreateInput.setDropdown(true);
         responsableCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "responsable", String.class));
         responsableCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{responsable.nombre} #{responsable.domicilio} #{responsable.celular} #{responsable.telefonoAlternativo}", String.class));
@@ -177,7 +175,7 @@ privileged aspect InformeBean_Roo_ManagedBean {
         
         InputText linkCreateInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
         linkCreateInput.setId("linkCreateInput");
-        linkCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.link}", String.class));
+        linkCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{relevamientoBean.relevamiento.link}", String.class));
         linkCreateInput.setRequired(false);
         htmlPanelGrid.getChildren().add(linkCreateInput);
         
@@ -187,34 +185,10 @@ privileged aspect InformeBean_Roo_ManagedBean {
         linkCreateInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(linkCreateInputMessage);
         
-        OutputLabel tipoInformeCreateOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
-        tipoInformeCreateOutput.setFor("tipoInformeCreateInput");
-        tipoInformeCreateOutput.setId("tipoInformeCreateOutput");
-        tipoInformeCreateOutput.setValue("Tipo Informe:");
-        htmlPanelGrid.getChildren().add(tipoInformeCreateOutput);
-        
-        AutoComplete tipoInformeCreateInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
-        tipoInformeCreateInput.setId("tipoInformeCreateInput");
-        tipoInformeCreateInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.tipoInforme}", TipoInforme.class));
-        tipoInformeCreateInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{informeBean.completeTipoInforme}", List.class, new Class[] { String.class }));
-        tipoInformeCreateInput.setDropdown(true);
-        tipoInformeCreateInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "tipoInforme", String.class));
-        tipoInformeCreateInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{tipoInforme.tipoInforme}", String.class));
-        tipoInformeCreateInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{tipoInforme}", TipoInforme.class));
-        tipoInformeCreateInput.setConverter(new TipoInformeConverter());
-        tipoInformeCreateInput.setRequired(false);
-        htmlPanelGrid.getChildren().add(tipoInformeCreateInput);
-        
-        Message tipoInformeCreateInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
-        tipoInformeCreateInputMessage.setId("tipoInformeCreateInputMessage");
-        tipoInformeCreateInputMessage.setFor("tipoInformeCreateInput");
-        tipoInformeCreateInputMessage.setDisplay("icon");
-        htmlPanelGrid.getChildren().add(tipoInformeCreateInputMessage);
-        
         return htmlPanelGrid;
     }
     
-    public HtmlPanelGrid InformeBean.populateEditPanel() {
+    public HtmlPanelGrid RelevamientoBean.populateEditPanel() {
         FacesContext facesContext = FacesContext.getCurrentInstance();
         javax.faces.application.Application application = facesContext.getApplication();
         ExpressionFactory expressionFactory = application.getExpressionFactory();
@@ -230,7 +204,7 @@ privileged aspect InformeBean_Roo_ManagedBean {
         
         InputText periodoEditInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
         periodoEditInput.setId("periodoEditInput");
-        periodoEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.periodo}", String.class));
+        periodoEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{relevamientoBean.relevamiento.periodo}", String.class));
         periodoEditInput.setRequired(false);
         htmlPanelGrid.getChildren().add(periodoEditInput);
         
@@ -248,8 +222,8 @@ privileged aspect InformeBean_Roo_ManagedBean {
         
         AutoComplete responsableEditInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
         responsableEditInput.setId("responsableEditInput");
-        responsableEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.responsable}", Tecnico.class));
-        responsableEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{informeBean.completeResponsable}", List.class, new Class[] { String.class }));
+        responsableEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{relevamientoBean.relevamiento.responsable}", Tecnico.class));
+        responsableEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{relevamientoBean.completeResponsable}", List.class, new Class[] { String.class }));
         responsableEditInput.setDropdown(true);
         responsableEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "responsable", String.class));
         responsableEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{responsable.nombre} #{responsable.domicilio} #{responsable.celular} #{responsable.telefonoAlternativo}", String.class));
@@ -272,7 +246,7 @@ privileged aspect InformeBean_Roo_ManagedBean {
         
         InputText linkEditInput = (InputText) application.createComponent(InputText.COMPONENT_TYPE);
         linkEditInput.setId("linkEditInput");
-        linkEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.link}", String.class));
+        linkEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{relevamientoBean.relevamiento.link}", String.class));
         linkEditInput.setRequired(false);
         htmlPanelGrid.getChildren().add(linkEditInput);
         
@@ -282,34 +256,10 @@ privileged aspect InformeBean_Roo_ManagedBean {
         linkEditInputMessage.setDisplay("icon");
         htmlPanelGrid.getChildren().add(linkEditInputMessage);
         
-        OutputLabel tipoInformeEditOutput = (OutputLabel) application.createComponent(OutputLabel.COMPONENT_TYPE);
-        tipoInformeEditOutput.setFor("tipoInformeEditInput");
-        tipoInformeEditOutput.setId("tipoInformeEditOutput");
-        tipoInformeEditOutput.setValue("Tipo Informe:");
-        htmlPanelGrid.getChildren().add(tipoInformeEditOutput);
-        
-        AutoComplete tipoInformeEditInput = (AutoComplete) application.createComponent(AutoComplete.COMPONENT_TYPE);
-        tipoInformeEditInput.setId("tipoInformeEditInput");
-        tipoInformeEditInput.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.tipoInforme}", TipoInforme.class));
-        tipoInformeEditInput.setCompleteMethod(expressionFactory.createMethodExpression(elContext, "#{informeBean.completeTipoInforme}", List.class, new Class[] { String.class }));
-        tipoInformeEditInput.setDropdown(true);
-        tipoInformeEditInput.setValueExpression("var", expressionFactory.createValueExpression(elContext, "tipoInforme", String.class));
-        tipoInformeEditInput.setValueExpression("itemLabel", expressionFactory.createValueExpression(elContext, "#{tipoInforme.tipoInforme}", String.class));
-        tipoInformeEditInput.setValueExpression("itemValue", expressionFactory.createValueExpression(elContext, "#{tipoInforme}", TipoInforme.class));
-        tipoInformeEditInput.setConverter(new TipoInformeConverter());
-        tipoInformeEditInput.setRequired(false);
-        htmlPanelGrid.getChildren().add(tipoInformeEditInput);
-        
-        Message tipoInformeEditInputMessage = (Message) application.createComponent(Message.COMPONENT_TYPE);
-        tipoInformeEditInputMessage.setId("tipoInformeEditInputMessage");
-        tipoInformeEditInputMessage.setFor("tipoInformeEditInput");
-        tipoInformeEditInputMessage.setDisplay("icon");
-        htmlPanelGrid.getChildren().add(tipoInformeEditInputMessage);
-        
         return htmlPanelGrid;
     }
     
-    public HtmlPanelGrid InformeBean.populateViewPanel() {
+    public HtmlPanelGrid RelevamientoBean.populateViewPanel() {
         FacesContext facesContext = FacesContext.getCurrentInstance();
         javax.faces.application.Application application = facesContext.getApplication();
         ExpressionFactory expressionFactory = application.getExpressionFactory();
@@ -324,7 +274,7 @@ privileged aspect InformeBean_Roo_ManagedBean {
         
         HtmlOutputText periodoValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
         periodoValue.setId("periodoValue");
-        periodoValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.periodo}", String.class));
+        periodoValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{relevamientoBean.relevamiento.periodo}", String.class));
         htmlPanelGrid.getChildren().add(periodoValue);
         
         HtmlOutputText responsableLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
@@ -333,7 +283,7 @@ privileged aspect InformeBean_Roo_ManagedBean {
         htmlPanelGrid.getChildren().add(responsableLabel);
         
         HtmlOutputText responsableValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
-        responsableValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.responsable}", Tecnico.class));
+        responsableValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{relevamientoBean.relevamiento.responsable}", Tecnico.class));
         responsableValue.setConverter(new TecnicoConverter());
         htmlPanelGrid.getChildren().add(responsableValue);
         
@@ -344,34 +294,24 @@ privileged aspect InformeBean_Roo_ManagedBean {
         
         HtmlOutputText linkValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
         linkValue.setId("linkValue");
-        linkValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.link}", String.class));
+        linkValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{relevamientoBean.relevamiento.link}", String.class));
         htmlPanelGrid.getChildren().add(linkValue);
-        
-        HtmlOutputText tipoInformeLabel = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
-        tipoInformeLabel.setId("tipoInformeLabel");
-        tipoInformeLabel.setValue("Tipo Informe:");
-        htmlPanelGrid.getChildren().add(tipoInformeLabel);
-        
-        HtmlOutputText tipoInformeValue = (HtmlOutputText) application.createComponent(HtmlOutputText.COMPONENT_TYPE);
-        tipoInformeValue.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{informeBean.informe.tipoInforme}", TipoInforme.class));
-        tipoInformeValue.setConverter(new TipoInformeConverter());
-        htmlPanelGrid.getChildren().add(tipoInformeValue);
         
         return htmlPanelGrid;
     }
     
-    public Informe InformeBean.getInforme() {
-        if (informe == null) {
-            informe = new Informe();
+    public Relevamiento RelevamientoBean.getRelevamiento() {
+        if (relevamiento == null) {
+            relevamiento = new Relevamiento();
         }
-        return informe;
+        return relevamiento;
     }
     
-    public void InformeBean.setInforme(Informe informe) {
-        this.informe = informe;
+    public void RelevamientoBean.setRelevamiento(Relevamiento relevamiento) {
+        this.relevamiento = relevamiento;
     }
     
-    public List<Tecnico> InformeBean.completeResponsable(String query) {
+    public List<Tecnico> RelevamientoBean.completeResponsable(String query) {
         List<Tecnico> suggestions = new ArrayList<Tecnico>();
         for (Tecnico tecnico : Tecnico.findAllTecnicoes()) {
             String tecnicoStr = String.valueOf(tecnico.getNombre() +  " "  + tecnico.getDomicilio() +  " "  + tecnico.getCelular() +  " "  + tecnico.getTelefonoAlternativo());
@@ -382,74 +322,63 @@ privileged aspect InformeBean_Roo_ManagedBean {
         return suggestions;
     }
     
-    public List<TipoInforme> InformeBean.completeTipoInforme(String query) {
-        List<TipoInforme> suggestions = new ArrayList<TipoInforme>();
-        for (TipoInforme tipoInforme : TipoInforme.findAllTipoInformes()) {
-            String tipoInformeStr = String.valueOf(tipoInforme.getTipoInforme());
-            if (tipoInformeStr.toLowerCase().startsWith(query.toLowerCase())) {
-                suggestions.add(tipoInforme);
-            }
-        }
-        return suggestions;
-    }
-    
-    public String InformeBean.onEdit() {
+    public String RelevamientoBean.onEdit() {
         return null;
     }
     
-    public boolean InformeBean.isCreateDialogVisible() {
+    public boolean RelevamientoBean.isCreateDialogVisible() {
         return createDialogVisible;
     }
     
-    public void InformeBean.setCreateDialogVisible(boolean createDialogVisible) {
+    public void RelevamientoBean.setCreateDialogVisible(boolean createDialogVisible) {
         this.createDialogVisible = createDialogVisible;
     }
     
-    public String InformeBean.displayList() {
+    public String RelevamientoBean.displayList() {
         createDialogVisible = false;
-        findAllInformes();
-        return "informe";
+        findAllRelevamientoes();
+        return "relevamiento";
     }
     
-    public String InformeBean.displayCreateDialog() {
-        informe = new Informe();
+    public String RelevamientoBean.displayCreateDialog() {
+        relevamiento = new Relevamiento();
         createDialogVisible = true;
-        return "informe";
+        return "relevamiento";
     }
     
-    public String InformeBean.persist() {
+    public String RelevamientoBean.persist() {
         String message = "";
-        if (informe.getId() != null) {
-            informe.merge();
+        if (relevamiento.getId() != null) {
+            relevamiento.merge();
             message = "message_successfully_updated";
         } else {
-            informe.persist();
+            relevamiento.persist();
             message = "message_successfully_created";
         }
         RequestContext context = RequestContext.getCurrentInstance();
         context.execute("createDialogWidget.hide()");
         context.execute("editDialogWidget.hide()");
         
-        FacesMessage facesMessage = MessageFactory.getMessage(message, "Informe");
+        FacesMessage facesMessage = MessageFactory.getMessage(message, "Relevamiento");
         FacesContext.getCurrentInstance().addMessage(null, facesMessage);
         reset();
-        return findAllInformes();
+        return findAllRelevamientoes();
     }
     
-    public String InformeBean.delete() {
-        informe.remove();
-        FacesMessage facesMessage = MessageFactory.getMessage("message_successfully_deleted", "Informe");
+    public String RelevamientoBean.delete() {
+        relevamiento.remove();
+        FacesMessage facesMessage = MessageFactory.getMessage("message_successfully_deleted", "Relevamiento");
         FacesContext.getCurrentInstance().addMessage(null, facesMessage);
         reset();
-        return findAllInformes();
+        return findAllRelevamientoes();
     }
     
-    public void InformeBean.reset() {
-        informe = null;
+    public void RelevamientoBean.reset() {
+        relevamiento = null;
         createDialogVisible = false;
     }
     
-    public void InformeBean.handleDialogClose(CloseEvent event) {
+    public void RelevamientoBean.handleDialogClose(CloseEvent event) {
         reset();
     }
     

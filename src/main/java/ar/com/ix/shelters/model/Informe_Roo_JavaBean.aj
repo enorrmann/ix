@@ -4,7 +4,6 @@
 package ar.com.ix.shelters.model;
 
 import ar.com.ix.shelters.model.Informe;
-import ar.com.ix.shelters.model.Tecnico;
 import ar.com.ix.shelters.model.TipoInforme;
 
 privileged aspect Informe_Roo_JavaBean {
@@ -15,30 +14,6 @@ privileged aspect Informe_Roo_JavaBean {
     
     public void Informe.setTipoInforme(TipoInforme tipoInforme) {
         this.tipoInforme = tipoInforme;
-    }
-    
-    public String Informe.getPeriodo() {
-        return this.periodo;
-    }
-    
-    public void Informe.setPeriodo(String periodo) {
-        this.periodo = periodo;
-    }
-    
-    public Tecnico Informe.getResponsable() {
-        return this.responsable;
-    }
-    
-    public void Informe.setResponsable(Tecnico responsable) {
-        this.responsable = responsable;
-    }
-    
-    public String Informe.getLinkAlInforme() {
-        return this.linkAlInforme;
-    }
-    
-    public void Informe.setLinkAlInforme(String linkAlInforme) {
-        this.linkAlInforme = linkAlInforme;
     }
     
 }

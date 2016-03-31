@@ -88,15 +88,15 @@ private MenuModel menuModel;
         item.setAsync(false);
         item.setUpdate(":dataForm:data");
         submenu.getChildren().add(item);
-        /*item = new MenuItem();
+        item = new MenuItem();
         item.setId("listInformeMenuItem");
-        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_list}", String.class));
+        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_list} Todos", String.class));
         item.setActionExpression(expressionFactory.createMethodExpression(elContext, "#{informeBean.displayList}", String.class, new Class[0]));
         item.setIcon("ui-icon ui-icon-folder-open");
         item.setAjax(false);
         item.setAsync(false);
         item.setUpdate(":dataForm:data");
-        submenu.getChildren().add(item);*/
+        submenu.getChildren().add(item);
         addTipoInformeItems(submenu);
         menuModel.addSubmenu(submenu);
         // tipo informe
@@ -121,12 +121,59 @@ private MenuModel menuModel;
         item.setAsync(false);
         item.setUpdate(":dataForm:data");
         submenu.getChildren().add(item);
-//fin tipo informe
+        //fin tipo informe
+        menuModel.addSubmenu(submenu);
+        //HISTORICO IMPORTANTE
+        submenu = new Submenu();
+        submenu.setId("historicoImportanteSubmenu");
+        submenu.setLabel("Historicos Importantes");
+        item = new MenuItem();
+        item.setId("createHistoricoImportanteMenuItem");
+        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_create}", String.class));
+        item.setActionExpression(expressionFactory.createMethodExpression(elContext, "#{historicoImportanteBean.displayCreateDialog}", String.class, new Class[0]));
+        item.setIcon("ui-icon ui-icon-document");
+        item.setAjax(false);
+        item.setAsync(false);
+        item.setUpdate(":dataForm:data");
+        submenu.getChildren().add(item);
+        item = new MenuItem();
+        item.setId("listHistoricoImportanteMenuItem");
+        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_list}", String.class));
+        item.setActionExpression(expressionFactory.createMethodExpression(elContext, "#{historicoImportanteBean.displayList}", String.class, new Class[0]));
+        item.setIcon("ui-icon ui-icon-folder-open");
+        item.setAjax(false);
+        item.setAsync(false);
+        item.setUpdate(":dataForm:data");
+        submenu.getChildren().add(item);
         menuModel.addSubmenu(submenu);
 
+        // RELEVAMIENTOS
+        submenu = new Submenu();
+        submenu.setId("relevamientoSubmenu");
+        submenu.setLabel("Relevamientos y Circuitos");
+        item = new MenuItem();
+        item.setId("createRelevamientoMenuItem");
+        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_create}", String.class));
+        item.setActionExpression(expressionFactory.createMethodExpression(elContext, "#{relevamientoBean.displayCreateDialog}", String.class, new Class[0]));
+        item.setIcon("ui-icon ui-icon-document");
+        item.setAjax(false);
+        item.setAsync(false);
+        item.setUpdate(":dataForm:data");
+        submenu.getChildren().add(item);
+        item = new MenuItem();
+        item.setId("listRelevamientoMenuItem");
+        item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_list}", String.class));
+        item.setActionExpression(expressionFactory.createMethodExpression(elContext, "#{relevamientoBean.displayList}", String.class, new Class[0]));
+        item.setIcon("ui-icon ui-icon-folder-open");
+        item.setAjax(false);
+        item.setAsync(false);
+        item.setUpdate(":dataForm:data");
+        submenu.getChildren().add(item);
+        menuModel.addSubmenu(submenu);        
+        // CAPACITACIONES
         submenu = new Submenu();
         submenu.setId("capacitacionSubmenu");
-        submenu.setLabel("Capacitacion");
+        submenu.setLabel("Capacitaciones");
         item = new MenuItem();
         item.setId("createCapacitacionMenuItem");
         item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_create}", String.class));
@@ -195,7 +242,7 @@ private MenuModel menuModel;
 
         submenu = new Submenu();
         submenu.setId("clienteSubmenu");
-        submenu.setLabel("Cliente");
+        submenu.setLabel("Clientes");
         item = new MenuItem();
         item.setId("createClienteMenuItem");
         item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_create}", String.class));
@@ -333,7 +380,7 @@ private MenuModel menuModel;
         
         submenu = new Submenu();
         submenu.setId("tareaSubmenu");
-        submenu.setLabel("Tarea");
+        submenu.setLabel("Tareas");
         item = new MenuItem();
         item.setId("createTareaMenuItem");
         item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_create} Tarea", String.class));
@@ -380,7 +427,7 @@ private MenuModel menuModel;
         
         submenu = new Submenu();
         submenu.setId("tecnicoSubmenu");
-        submenu.setLabel("Tecnico");
+        submenu.setLabel("Tecnicos");
         item = new MenuItem();
         item.setId("createTecnicoMenuItem");
         item.setValueExpression("value", expressionFactory.createValueExpression(elContext, "#{messages.label_create}", String.class));

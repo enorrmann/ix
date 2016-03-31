@@ -5,22 +5,11 @@ package ar.com.ix.shelters.model;
 
 import ar.com.ix.shelters.model.Informe;
 import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect Informe_Roo_Jpa_ActiveRecord {
     
-    @PersistenceContext
-    transient EntityManager Informe.entityManager;
-    
-    public static final List<String> Informe.fieldNames4OrderClauseFilter = java.util.Arrays.asList("tipoInforme", "periodo", "responsable", "linkAlInforme");
-    
-    public static final EntityManager Informe.entityManager() {
-        EntityManager em = new Informe().entityManager;
-        if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
-        return em;
-    }
+    public static final List<String> Informe.fieldNames4OrderClauseFilter = java.util.Arrays.asList("tipoInforme");
     
     public static long Informe.countInformes() {
         return entityManager().createQuery("SELECT COUNT(o) FROM Informe o", Long.class).getSingleResult();
@@ -59,35 +48,6 @@ privileged aspect Informe_Roo_Jpa_ActiveRecord {
             }
         }
         return entityManager().createQuery(jpaQuery, Informe.class).setFirstResult(firstResult).setMaxResults(maxResults).getResultList();
-    }
-    
-    @Transactional
-    public void Informe.persist() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.persist(this);
-    }
-    
-    @Transactional
-    public void Informe.remove() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        if (this.entityManager.contains(this)) {
-            this.entityManager.remove(this);
-        } else {
-            Informe attached = Informe.findInforme(this.id);
-            this.entityManager.remove(attached);
-        }
-    }
-    
-    @Transactional
-    public void Informe.flush() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.flush();
-    }
-    
-    @Transactional
-    public void Informe.clear() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.clear();
     }
     
     @Transactional

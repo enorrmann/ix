@@ -14,6 +14,15 @@
 				"buffer_size": 1367,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"contents": "-Anual	\n-Mensual	\n-Semestral	\n-Mantenimiento Preventivo	\n-Analisis de red	\n-Planos actualizados	",
+			"settings":
+			{
+				"buffer_size": 96,
+				"line_ending": "Unix",
+				"name": "-Anual"
+			}
 		}
 	],
 	"build_system": "Packages/User/bash.sublime-build",
@@ -359,7 +368,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -385,6 +394,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 306.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 96,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96,
+								96
+							]
+						],
+						"settings":
+						{
+							"auto_name": "-Anual",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

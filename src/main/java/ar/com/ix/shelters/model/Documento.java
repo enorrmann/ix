@@ -7,10 +7,18 @@ import javax.persistence.ManyToOne;
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
-public class Informe extends Documento {
+public abstract class Documento {
+
+    /**
+     */
+    private String periodo;
 
     /**
      */
     @ManyToOne
-    private TipoInforme tipoInforme;
+    private Tecnico responsable;
+
+    /**
+     */
+    private String link;
 }

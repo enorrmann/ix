@@ -31,7 +31,7 @@
             #{informe.responsable.nombre}
           </p:column>
           <p:column headerText="Link">
-            <h:outputLink target="_new" value="#{informe.linkAlInforme}">Abrir informe</h:outputLink>
+            <h:outputLink target="_new" value="#{informe.link}">Abrir informe</h:outputLink>
           </p:column>
 
           
@@ -85,7 +85,7 @@
           <h:outputText value="Tipo Informe"/> <h:outputText value="#{informe.tipoInforme.tipoInforme}"/>
           <h:outputText value="Periodo"/> <h:outputText value="#{informe.periodo}"/>
           <h:outputText value="Tecnico"/> <h:outputText value="#{informe.responsable.nombre}"/>
-          <h:outputText value="Link al informe"/> <h:outputLink target="_new" value="#{informe.linkAlInforme}">Abrir informe</h:outputLink>
+          <h:outputText value="Link al informe"/> <h:outputLink target="_new" value="#{informe.link}">Abrir informe</h:outputLink>
 
           </h:panelGrid>
           <p:commandButton id="viewCloseButton" value="#{messages.label_close}" onclick="viewDialogWidget.hide()" type="button" />
