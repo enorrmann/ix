@@ -1,0 +1,31 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pm="http://primefaces.org/mobile"
+    renderKitId="PRIMEFACES_MOBILE"
+    contentType="text/html">
+<pm:page title="Ix">
+<pm:view id="main">
+<pm:header title="Ix" />
+<pm:content>
+
+<h:form>
+<p:dataList> 
+    
+	<h:commandLink action="#{shelterBean.displayList}">Shelters</h:commandLink>
+    <h:commandLink action="#{informeBean.displayList}">Informes</h:commandLink>
+    <h:commandLink action="#{historicoImportanteBean.displayList}">Historicos importantes</h:commandLink>
+    <h:commandLink action="#{relevamientoBean.displayList}">Relevamientos y circuitos</h:commandLink>
+    <h:commandLink action="#{capacitacionBean.displayList}">Capacitaciones</h:commandLink>
+    <h:commandLink action="#{componenteBean.displayList}">Stock</h:commandLink>
+    <h:commandLink action="#{clienteBean.displayList}">Clientes</h:commandLink>
+    <h:commandLink action="#{tecnicoBean.displayList}">Tecnicos</h:commandLink>
+
+</p:dataList>
+</h:form>
+
+</pm:content>
+</pm:view>
+</pm:page>
+</f:view>

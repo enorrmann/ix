@@ -1,0 +1,25 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pm="http://primefaces.org/mobile"
+    renderKitId="PRIMEFACES_MOBILE"
+    contentType="text/html">
+<pm:page title="Informes">
+<pm:view id="main">
+<pm:header title="Informes" />
+<pm:content>
+
+
+<p:dataList value="#{relevamientoBean.allRelevamientoes}" var="informe">
+<h:outputLink value="#{informe.link}">
+	<h3>#{informe.periodo}</h3>
+	#{informe.responsable.nombre}
+</h:outputLink>
+
+</p:dataList>
+
+</pm:content>
+</pm:view>
+</pm:page>
+</f:view>

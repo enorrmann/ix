@@ -8,20 +8,19 @@
 	"buffers":
 	[
 		{
-			"file": "src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBeanCustom.aj",
+			"file": "src/main/webapp/pages/mobile/shelter.xhtml",
 			"settings":
 			{
-				"buffer_size": 1367,
+				"buffer_size": 633,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "-Anual	\n-Mensual	\n-Semestral	\n-Mantenimiento Preventivo	\n-Analisis de red	\n-Planos actualizados	",
+			"file": "src/main/webapp/pages/mobile/main.xhtml",
 			"settings":
 			{
-				"buffer_size": 96,
-				"line_ending": "Unix",
-				"name": "-Anual"
+				"buffer_size": 1154,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -98,18 +97,53 @@
 	"expanded_folders":
 	[
 		"/home/enorrmann/git/ix",
-		"/home/enorrmann/git/ix/init",
-		"/home/enorrmann/git/ix/init/java",
-		"/home/enorrmann/git/ix/init/java/web"
+		"/home/enorrmann/git/ix/src",
+		"/home/enorrmann/git/ix/src/main",
+		"/home/enorrmann/git/ix/src/main/webapp",
+		"/home/enorrmann/git/ix/src/main/webapp/pages"
 	],
 	"file_history":
 	[
-		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Informe_Roo_Jpa_ActiveRecordCustom.aj",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/mobile/informe.xhtml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/mobile/historicoImportante.xhtml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/mobile/relevamiento.xhtml",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ApplicationBean.java",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/HistoricoImportanteBean_Roo_ManagedBean.aj",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/RelevamientoBean_Roo_ManagedBean.aj",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/HistoricoImportanteBean.java",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/historicoImportante.xhtml",
+		"/home/enorrmann/git/ix/init/pages/informe.xhtml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/mobile/main.xhtml",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/RelevamientoBean.java",
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBean.aj",
-		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Informe_Roo_Jpa_ActiveRecord.aj",
-		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBeanCustom.aj",
-		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ApplicationBean_Roo_ApplicationBean.aj",
 		"/home/enorrmann/git/ix/init/java/model/Shelter.java",
+		"/home/enorrmann/git/ix/init/pages/shelter.xhtml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/mainMobile.xhtml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/tipoInformeMobile.xhtml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/mobile/shelter.xhtml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/shelter.xhtml",
+		"/home/enorrmann/git/ix/init/backup.roo",
+		"/home/enorrmann/git/ix/pom.xml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/menu.xhtml",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Informe.java",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Documento.java",
+		"/home/enorrmann/.cache/.fr-IWlCta/sigaeweb-i9.log.1",
+		"/tmp/mozilla_enorrmann0/sigaeweb-i9.log",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/TipoInformeBean.java",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/TipoInformeBean_Roo_ManagedBean.aj",
+		"/home/enorrmann/.m2/settings.xml",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/relevamiento.xhtml",
+		"/home/enorrmann/git/ix/target/shelters-0.1.0.BUILD-SNAPSHOT/pages/historicoImportante.xhtml",
+		"/home/enorrmann/git/ix/init/java/web/ApplicationBean.java",
+		"/home/enorrmann/git/ix/OKshelters.script",
+		"/home/enorrmann/git/ix/shelters.script",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ApplicationBean_Roo_ApplicationBean.aj",
+		"/home/enorrmann/git/ix/init/persistence.xml",
+		"/home/enorrmann/git/ix/target/classes/META-INF/spring/database.properties",
+		"/home/enorrmann/git/ix/src/main/webapp/pages/informe.xhtml",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBeanCustom.aj",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Informe_Roo_Jpa_ActiveRecordCustom.aj",
+		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Informe_Roo_Jpa_ActiveRecord.aj",
 		"/home/enorrmann/git/ix/src/main/resources/META-INF/spring/applicationContext.xml",
 		"/home/enorrmann/git/ix/src/main/webapp/WEB-INF/faces-config.xml",
 		"/home/enorrmann/git/ix/src/main/webapp/WEB-INF/web.xml",
@@ -119,17 +153,11 @@
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/TipoInforme_Roo_Jpa_ActiveRecord.aj",
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/TipoInforme_Roo_Jpa_Entity.aj",
 		"/home/enorrmann/git/ix/src/main/webapp/pages/capacitacion.xhtml",
-		"/home/enorrmann/git/ix/init/java/web/ApplicationBean.java",
-		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ApplicationBean.java",
-		"/home/enorrmann/git/ix/init/pages/informe.xhtml",
 		"/home/enorrmann/git/ix/init/pages/capacitacion.xhtml",
 		"/home/enorrmann/git/ix/log.roo",
-		"/home/enorrmann/git/ix/init/backup.roo",
-		"/home/enorrmann/git/ix/shelters.script",
 		"/home/enorrmann/UnityProjects/New Unity Project/Assets/scripts/CameraControl.cs",
 		"/home/enorrmann/git/ix/init/messages_es.properties",
 		"/home/enorrmann/git/ix/src/main/resources/ar/com/ix/shelters/web/i18n/messages_es.properties",
-		"/home/enorrmann/git/ix/src/main/webapp/pages/informe.xhtml",
 		"/home/enorrmann/alter_dev/pdfjs-dist-master/README.md",
 		"/home/enorrmann/alter_dev/pdfjs-dist-master/build/pdf.js",
 		"/home/enorrmann/alter_dev/pdfjs-dist-master/web/pdf_viewer.js",
@@ -138,11 +166,9 @@
 		"/home/enorrmann/git/sgpbackend/src/main/java/ar/com/mdevsol/sgponline/web/MarcaBean_Roo_ManagedBean.aj",
 		"/home/enorrmann/git/ix/src/main/webapp/templates/layout.xhtml",
 		"/home/enorrmann/alter_dev/JS_Blanco/addInput.js",
-		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Informe.java",
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Tecnico.java",
 		"/home/enorrmann/git/sgpbackend/src/main/webapp/pages/provision.xhtml",
 		"/home/enorrmann/git/ix/src/main/webapp/pages/tarea.xhtml",
-		"/home/enorrmann/git/ix/init/pages/shelter.xhtml",
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/InformeBean.java",
 		"/home/enorrmann/.cache/.fr-mkIwzz/v1/src/main/java/ar/com/ix/shelters/web/ApplicationBean_Roo_ApplicationBean.aj",
 		"/home/enorrmann/git/ix/init/pages/componente.xhtml",
@@ -155,7 +181,6 @@
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/web/ShelterViewBean.java",
 		"/home/enorrmann/git/ix/init/java/web/ShelterViewBean.java",
 		"/home/enorrmann/git/ix/src/main/java/ar/com/ix/shelters/model/Shelter.java",
-		"/home/enorrmann/git/ix/src/main/webapp/pages/shelter.xhtml",
 		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/target/cargos-logica-rmi-0.0.1-SNAPSHOT/WEB-INF/web.xml",
 		"/home/enorrmann/workspace_gf3/cargos/CargoEJBModule/ejbModule/META-INF/ejb-jar.xml",
 		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/EjbInjector.java",
@@ -206,32 +231,7 @@
 		"/home/enorrmann/workspace_gf3/sigae-web-logic/sigae-web-logic-rest/src/main/java/ar/gov/santafe/meduc/sigae/logica/rest/EjbInjector.java",
 		"/home/enorrmann/workspace_gf3/sigae-web-logic/pom.xml",
 		"/home/enorrmann/workspace_gf3/sigae-web-logic/.project",
-		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeLocalSecciones.java",
-		"/home/enorrmann/workspace_gf3/Sigae/Sigae-web/src/main/java/org/sigae/SeccionesBean.java",
-		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/MovimientoAlumnoEJB.java",
-		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeBeanSecciones.java",
-		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeBean.java",
-		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/AlumnoPlazaEJB.java",
-		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/CarrerasFacadeBean.java",
-		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeLocal.java",
-		"/home/enorrmann/workspace_gf3/autodeploy_cargos.sh",
-		"/home/enorrmann/workspace_gf3/EntidadesEducacion/target/classes/META-INF/persistence.xml",
-		"/home/enorrmann/workspace_gf3/cargos-logica/cargos-logica-rmi/src/main/java/ar/gov/santafe/meduc/cargos/logica/rmi/LocalInjector.java",
-		"/home/enorrmann/.cache/.fr-sb1FbG/META-INF/application.xml",
-		"/home/enorrmann/.cache/.fr-VGSzLg/META-INF/application.xml",
-		"/home/enorrmann/workspace_gf3/inscripciones-logica/inscripciones-logica-rmi/pom.xml",
-		"/home/enorrmann/.cache/.fr-4tRRRz/WEB-INF/sun-web.xml",
-		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/Instalacion.java",
-		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/InstalacionXGrupo.java",
-		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/PresetXInstalacion.java",
-		"/home/enorrmann/Escritorio/logs/server.log_2015-09-01T07-56-01",
-		"/home/enorrmann/Escritorio/logs/server.log",
-		"/home/enorrmann/workspace_gf3/cargos/CargoEJBModule/ejbModule/org/educacion/cargos/report/ReportEjb.java",
-		"/home/enorrmann/desarrollo/glassfish3/glassfish/domains/domain1/config/domain.xml",
-		"/home/enorrmann/Dropbox/PROYECTOS/shelter2web/pages/componente.xhtml",
-		"/home/enorrmann/desarrollo/shelter2web/src/main/webapp/pages/componente.xhtml",
-		"/home/enorrmann/workspace_gf3/EntidadesEducacion/src/main/java/modelo/administracion/Usuario.java",
-		"/home/enorrmann/Escritorio/error.titulos"
+		"/home/enorrmann/workspace_gf3/Sigae/Sigae-ejb/src/main/java/org/educacion/sigae/ejb/GrupoAlumnoFacadeLocalSecciones.java"
 	],
 	"find":
 	{
@@ -242,6 +242,7 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"*",
 			"*.java",
 			"*.xml",
 			"*",
@@ -254,6 +255,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"findAllInformes",
+			"link",
+			"action",
+			"deploy",
+			"deploy ",
+			"deploy",
+			"severe",
+			"f:",
+			"primefaces",
+			"VALUES(",
+			"INTO INFORME",
+			"informe",
+			"documento",
+			"//",
+			"tipo",
+			"informebe",
+			"informe",
+			"documento",
+			"document",
+			"documento",
+			"//",
+			"linkAlInforme",
 			"findAllInformes",
 			"informe",
 			"tipo",
@@ -346,6 +369,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"VALUES('Informe',",
+			"INTO DOCUMENTO",
+			"link",
 			"",
 			"\"",
 			"}",
@@ -373,27 +399,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBeanCustom.aj",
+					"file": "src/main/webapp/pages/mobile/shelter.xhtml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1367,
+						"buffer_size": 633,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1212,
-								1212
+								527,
+								527
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 306.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -401,24 +427,26 @@
 				},
 				{
 					"buffer": 1,
+					"file": "src/main/webapp/pages/mobile/main.xhtml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 96,
+						"buffer_size": 1154,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								96,
-								96
+								379,
+								379
 							]
 						],
 						"settings":
 						{
-							"auto_name": "-Anual",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -483,16 +511,88 @@
 		"selected_items":
 		[
 			[
+				"relevamientobean",
+				"src/main/java/ar/com/ix/shelters/web/RelevamientoBean_Roo_ManagedBean.aj"
+			],
+			[
+				"historicoimportantebean",
+				"src/main/java/ar/com/ix/shelters/web/HistoricoImportanteBean_Roo_ManagedBean.aj"
+			],
+			[
+				"historico",
+				"src/main/webapp/pages/historicoImportante.xhtml"
+			],
+			[
+				"informe",
+				"init/pages/informe.xhtml"
+			],
+			[
+				"relevamiento",
+				"src/main/java/ar/com/ix/shelters/web/RelevamientoBean.java"
+			],
+			[
+				"histori",
+				"src/main/java/ar/com/ix/shelters/web/HistoricoImportanteBean.java"
+			],
+			[
+				"informebean",
+				"src/main/java/ar/com/ix/shelters/web/InformeBean_Roo_ManagedBean.aj"
+			],
+			[
+				"application",
+				"src/main/java/ar/com/ix/shelters/web/ApplicationBean.java"
+			],
+			[
+				"shelter",
+				"init/pages/shelter.xhtml"
+			],
+			[
+				"documento",
+				"src/main/java/ar/com/ix/shelters/model/Documento.java"
+			],
+			[
+				"tipoinformebean",
+				"src/main/java/ar/com/ix/shelters/web/TipoInformeBean_Roo_ManagedBean.aj"
+			],
+			[
+				"tipoin",
+				"src/main/java/ar/com/ix/shelters/web/TipoInformeBean.java"
+			],
+			[
+				"relevam",
+				"src/main/webapp/pages/relevamiento.xhtml"
+			],
+			[
+				"histo",
+				"target/shelters-0.1.0.BUILD-SNAPSHOT/pages/historicoImportante.xhtml"
+			],
+			[
+				"applicationbean",
+				"src/main/java/ar/com/ix/shelters/web/ApplicationBean.java"
+			],
+			[
+				"apl",
+				"init/java/web/ApplicationBean.java"
+			],
+			[
+				"applica",
+				"init/java/web/ApplicationBean.java"
+			],
+			[
+				"database",
+				"target/classes/META-INF/spring/database.properties"
+			],
+			[
+				"persisten",
+				"init/persistence.xml"
+			],
+			[
 				"tipoinforme",
 				"src/main/java/ar/com/ix/shelters/model/TipoInforme_Roo_JavaBean.aj"
 			],
 			[
 				"tipoinformeacti",
 				"src/main/java/ar/com/ix/shelters/model/TipoInforme_Roo_Jpa_ActiveRecord.aj"
-			],
-			[
-				"tipoin",
-				"src/main/java/ar/com/ix/shelters/model/TipoInforme_Roo_Jpa_Entity.aj"
 			],
 			[
 				"capacit",
@@ -503,19 +603,11 @@
 				"src/main/java/ar/com/ix/shelters/model/Capacitacion.java"
 			],
 			[
-				"informe",
-				"src/main/webapp/pages/informe.xhtml"
-			],
-			[
 				"web",
 				"src/main/webapp/WEB-INF/web.xml"
 			],
 			[
 				"shelter_",
-				"init/pages/shelter_view.xhtml"
-			],
-			[
-				"shelter",
 				"init/pages/shelter_view.xhtml"
 			],
 			[
@@ -761,10 +853,6 @@
 			[
 				"reportejb",
 				"cargos/CargoEJBModule/ejbModule/org/educacion/cargos/report/ReportEjb.java"
-			],
-			[
-				"persisten",
-				"EntidadesEducacion/target/classes/META-INF/persistence.xml"
 			],
 			[
 				"persitence",
